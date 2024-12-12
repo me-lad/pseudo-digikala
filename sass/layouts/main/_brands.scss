@@ -1,0 +1,22 @@
+// Brand Styles
+.brands {
+  &__item {
+    max-width: 12%;
+    @include responsive(Th) {
+      max-width: 16%;
+    }
+    @include responsive(Ts) {
+      max-width: 20%;
+    }
+    @include responsive(Ph) {
+      max-width: 25%;
+    }
+    @include responsive(Ps) {
+      max-width: 32%;
+    }
+    &-image {
+      width: 9rem;
+      height: 9rem;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+// Recommend Styles
+.recommend {
+  &__items {
+    min-width: 17.5rem;
+    width: 16.666%;
+  }
+  &__item {
+    &-circle {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      @include displayFlex();
+    }
+  }
+}

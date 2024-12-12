@@ -1,0 +1,7 @@
+// Article Styles
+.articles {
+  margin-bottom: 105px;
+  @include responsive(Ph) {
+    margin-bottom: 75px;
+  }
+}

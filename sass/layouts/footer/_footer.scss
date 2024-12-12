@@ -1,0 +1,96 @@
+// Footer Styles
+.footer {
+  margin-bottom: 9.5rem;
+  &__social {
+    &-animationLine {
+      width: 100%;
+      height: 0.15rem;
+      visibility: hidden;
+      transition: all 450ms ease-in;
+      &.youtube {
+        background-color: $red;
+      }
+      &.telegram {
+        background-color: $secondary-dark;
+      }
+      &.whatsapp {
+        background-color: $green;
+      }
+      &.twitter {
+        background-color: $secondary;
+      }
+    }
+    &-icon {
+      transition: all 675ms ease-in;
+    }
+    &:hover &-animationLine {
+      visibility: visible;
+      transform: translateY(2.75rem);
+    }
+    &:hover &-icon {
+      color: $red;
+      &.telegram {
+        color: $secondary-dark;
+      }
+      &.whatsapp {
+        color: $green;
+      }
+      &.twitter {
+        color: $secondary;
+      }
+    }
+  }
+  &__email {
+    &:focus {
+      border: 0.2rem solid $secondary-dark !important;
+      color: $secondary-dark !important;
+      padding-top: 0.85rem !important;
+      padding-bottom: 0.85rem !important;
+    }
+  }
+  &__about {
+    @include textBreakkit(5);
+    &-gradient {
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.9) 0,
+        transparent 20%
+      );
+      bottom: 0;
+    }
+  }
+  &__logo {
+    width: 5.5rem;
+    height: 5.5rem;
+    object-fit: cover;
+    @include responsive(Ph) {
+      width: 3.1rem;
+      height: 3.1rem;
+    }
+  }
+  &__container {
+    width: 31.5%;
+    height: 60%;
+    max-height: 12rem;
+    @include responsive(Ts) {
+      width: 35.5%;
+      max-height: 10.5rem;
+    }
+    @include responsive(Ps) {
+      width: 47.5%;
+      max-height: 8rem;
+    }
+  }
+  &__open,
+  &__close {
+    width: fit-content;
+  }
+  &__appPic {
+    @include responsive(Ph) {
+      width: 87.5% !important;
+    }
+  }
+  &__properties {
+    min-width: 17.5rem;
+  }
+}

@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include responsive(Laptop) {
+    font-size: 60%;
+  }
+
+  @include responsive(Th) {
+    font-size: 56.5%;
+  }
+
+  @include responsive(Ts) {
+    font-size: 48.5%;
+  }
+
+  @include responsive(Ph) {
+    font-size: 46%;
+  }
+
+  @include responsive(Ps) {
+    font-size: 40%;
+  }
+}
+
+html::-webkit-scrollbar {
+  width: 5px;
+  background-color: $white;
+}
+
+html::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: 20px;
+  background-color: $gray;
+  border-radius: 25px;
+}
+
+body {
+  margin: 0;
+  direction: rtl;
+  --bs-body-font-size: 1.6rem;
+  --bs-body-font-family: iransans, sans-serif;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.hover:hover {
+  color: $primary !important;
+  cursor: pointer;
+}
+
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+.accordion {
+  --bs-accordion-border-width: 0 !important;
+  --bs-accordion-border-color: transparent;
+  --bs-accordion-active-color: #ef4056;
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-btn-focus-box-shadow: none;
+  &-body {
+    --bs-gutter-x: 0 !important;
+  }
+}

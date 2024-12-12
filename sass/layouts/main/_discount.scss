@@ -1,0 +1,39 @@
+// Discount Styles
+.discount {
+  &__container {
+    background: linear-gradient(
+      180deg,
+      darken($primary-dark, 10%) 0,
+      $primary 100%
+    );
+    @include responsive(Th) {
+      border-radius: 0 !important;
+    }
+    &-item {
+      height: 28rem;
+      max-width: 18rem;
+      background-color: $white;
+      @include responsive(Ts) {
+        height: 25rem;
+      }
+    }
+    &-image {
+      &:nth-child(1) {
+        height: 32%;
+        object-fit: cover;
+      }
+      &:nth-child(2) {
+        height: 42%;
+        object-fit: cover;
+      }
+    }
+    &-productImage {
+      max-height: 15.5rem;
+      @include responsive(Th) {
+      }
+      @include responsive(Ts) {
+        max-height: 13rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+// Overrides Values
+
+// Colors
+$primary: #ef4056;
+$primary-dark: #d32f2f;
+$secondary: #19bfd3;
+$secondary-dark: #008eb2;
+$gray: #a1a3a8;
+$gray-dark: #62666d;
+$gray-light: #f0f0f1;
+$grayBlue: #3f4064;
+$grayBlue-dark: #23254e;
+$black: #0c0c0c;
+$dark: #303030;
+$white: #fff;
+$purple: #941b80;
+$green: #39ae00;
+$green-dark: #347d0f;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$red: #c4302b;
+$red-dark: #ff0000;
+
+// Color Maps
+$theme-colors: (
+  "primary": $primary,
+  "primary-dark": $primary-dark,
+  "secondary": $secondary,
+  "secondary-dark": $secondary-dark,
+  "gray": $gray,
+  "gray-dark": $gray-dark,
+  "gray-light": $gray-light,
+  "grayBlue": $grayBlue,
+  "grayBlue-dark": $grayBlue-dark,
+  "black": $black,
+  "dark": $dark,
+  "white": $white,
+  "purple": $purple,
+  "green": $green,
+  "green-dark": $green-dark,
+  "orange": $orange,
+  "yellow": $yellow,
+  "red": $red,
+  "red-dark": $red-dark,
+);

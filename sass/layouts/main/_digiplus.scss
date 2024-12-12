@@ -1,0 +1,14 @@
+// DigiPlus Styles
+.digiplus {
+  &__image {
+    @include responsive(Ts) {
+      width: 21.5% !important;
+    }
+  }
+  &__productPic {
+    max-height: 9rem;
+    @include responsive(Ph) {
+      max-height: 7.75rem;
+    }
+  }
+}

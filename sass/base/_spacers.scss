@@ -1,0 +1,22 @@
+$custom-spacers: (
+  5: $spacer * 2,
+  6: $spacer * 3,
+  7: $spacer * 3.5,
+  8: $spacer * 4,
+  9: $spacer * 4.5,
+  10: $spacer * 5,
+);
+
+$spacers: map-merge($spacers, $custom-spacers);
+
+$custom-zindex: (
+  50: 50,
+  51: 51,
+  52: 52,
+  53: 53,
+  54: 54,
+  55: 55,
+  100: 100,
+);
+
+$zindex-levels: map-merge($zindex-levels, $custom-zindex);

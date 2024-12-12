@@ -1,0 +1,22 @@
+// Story Styles
+.story {
+  &__item {
+    width: 8rem;
+    cursor: pointer;
+    @include responsive(Ph) {
+      width: 10.25rem;
+      &-circle {
+        width: 10.25rem !important;
+        height: 10.25rem !important;
+      }
+      & span {
+        font-size: 1.35rem !important;
+      }
+    }
+    &-circle {
+      width: 8rem;
+      height: 8rem;
+      border: 0.2rem solid $secondary-dark;
+    }
+  }
+}

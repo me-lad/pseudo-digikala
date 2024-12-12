@@ -1,0 +1,43 @@
+// Utilities Dir
+@import "utilities/functions";
+@import "utilities/variables";
+@import "utilities/mixins";
+
+// Custom Dir
+@import "custom";
+
+// Base Dir
+@import "base/typography";
+@import "base/default";
+@import "base/class";
+
+// Vendor Dir
+// Themes Dir
+// Layout Dir
+@import "layouts/header/header";
+@import "layouts/main/story";
+@import "layouts/main/slider";
+@import "layouts/main/frequently";
+@import "layouts/main/discount";
+@import "layouts/main/supermarket";
+@import "layouts/main/quartet";
+@import "layouts/main/category";
+@import "layouts/main/double";
+@import "layouts/main/recommend";
+@import "layouts/main/brands";
+@import "layouts/main/digiplus";
+@import "layouts/main/digiclub";
+@import "layouts/main/personal";
+@import "layouts/main/bestSeller";
+@import "layouts/main/article";
+@import "layouts/main/phoneCategory";
+@import "layouts/main/swiper";
+@import "layouts/footer/footer";
+@import "layouts/main/bottomMenu";
+
+// Components Dir
+@import "components/slider-btn";
+
+// Pages Dir
+@import "pages/home";
+@import "pages/login";

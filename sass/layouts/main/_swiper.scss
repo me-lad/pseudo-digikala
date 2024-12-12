@@ -1,0 +1,29 @@
+.swiper {
+  &-pagination {
+    bottom: 0 !important;
+    &-bullet {
+      background-color: $secondary;
+      &-active {
+        padding: 0 0.85rem !important;
+        border-radius: 0.5rem !important;
+        @include responsive(Ph) {
+          padding: 0 1.25rem !important;
+        }
+      }
+    }
+  }
+  &2 {
+    @include responsive(Ts) {
+      & img {
+        min-height: 27.5rem;
+        object-fit: cover;
+      }
+    }
+    @include responsive(Ps) {
+      & img {
+        min-height: 18rem;
+        object-fit: cover;
+      }
+    }
+  }
+}

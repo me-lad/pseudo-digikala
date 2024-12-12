@@ -1,0 +1,16 @@
+// BestSeller Styles
+.bestSeller {
+  &__slide {
+    max-width: 27.5%;
+    min-width: 40rem;
+    &-image {
+      width: 8rem;
+      height: 8rem;
+      object-fit: cover;
+      @include responsive(Ts) {
+        width: 7rem;
+        height: 7rem;
+      }
+    }
+  }
+}

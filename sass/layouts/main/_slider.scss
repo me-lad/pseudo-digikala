@@ -1,0 +1,19 @@
+// Slider Styles
+.slider {
+  &__btnGroup {
+    width: 11rem;
+    height: 5rem;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 2rem;
+    z-index: 11;
+    opacity: 0;
+  }
+  &__timer {
+    z-index: 12;
+    right: 2rem;
+    top: -1rem;
+    color: $white;
+    user-select: none;
+  }
+}

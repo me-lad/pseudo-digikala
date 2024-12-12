@@ -1,0 +1,24 @@
+// Category Styles
+.category {
+  &__item {
+    width: 13%;
+    @include responsive(Th) {
+      width: 16%;
+    }
+    @include responsive(Ph) {
+      width: 20%;
+    }
+    @include responsive(Ps) {
+      width: 30%;
+    }
+    &-image {
+      max-height: 10rem;
+      @include responsive(Ts) {
+        max-height: 9.25rem;
+      }
+      @include responsive(Ps) {
+        max-height: 7.75rem;
+      }
+    }
+  }
+}

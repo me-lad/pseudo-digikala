@@ -1,0 +1,94 @@
+// FlexBox
+.f-center {
+  @include displayFlex();
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.jc-sa {
+  justify-content: space-around;
+}
+
+.jc-se {
+  justify-content: space-evenly;
+}
+
+.jc-start {
+  justify-content: flex-start;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.ai-start {
+  align-items: flex-start;
+}
+
+.ai-end {
+  align-items: flex-end;
+}
+
+// Position
+.pos-c {
+  @include positionCenter();
+}
+
+// Others
+.my-transition {
+  @include transitionDefault();
+}
+
+.out-off {
+  outline: none;
+}
+
+.cup {
+  cursor: pointer;
+}
+
+.cug {
+  cursor: grab;
+}
+
+.cun {
+  cursor: none;
+}
+
+.textBreakkit-1 {
+  @include textBreakkit(1);
+}
+
+.textBreakkit-2 {
+  @include textBreakkit(2);
+}
+
+.textBreakkit-3 {
+  @include textBreakkit(3);
+}
+
+.textBreakkit-4 {
+  @include textBreakkit(4);
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.watch-all {
+  &::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f053";
+  }
+}

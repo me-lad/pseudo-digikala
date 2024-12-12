@@ -1,0 +1,46 @@
+// SuperMarket Styles
+.supermarket {
+  &__container {
+    background: linear-gradient(
+      270deg,
+      darken($green, 12%) 0,
+      lighten($green, 10%) 85%
+    );
+    @include responsive(Th) {
+      border-radius: 0 !important;
+    }
+    &-pill {
+      width: 13rem;
+      background-color: $white;
+      @include displayFlex();
+      border-radius: 2.5rem;
+      &--width {
+        width: 15.5rem;
+        @include responsive(Th) {
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+        }
+      }
+    }
+    &-image {
+      @include responsive(Th) {
+        width: 70% !important;
+      }
+      @include responsive(Ph) {
+        width: 50% !important;
+      }
+      @include responsive(Ps) {
+        width: 62.5% !important;
+      }
+    }
+    &-item {
+      max-width: 7.25rem;
+      max-height: 7.25rem;
+      @include responsive(Th) {
+        max-width: 6.75rem;
+        max-height: 6.75rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+// Header Styles
+.header {
+  box-shadow: 0 -0.25rem 1rem rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 103;
+  &__banner {
+    @include responsive(Ph) {
+      height: 4.5rem;
+      & > img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    @include responsive(Ps) {
+      height: 5.75rem;
+    }
+  }
+  &__searchBox {
+    width: 60rem;
+    height: 4rem;
+    @include responsive(Ph) {
+      display: none !important;
+    }
+  }
+  &__search {
+    width: 60rem;
+    height: 4rem;
+    @include responsive(Ps) {
+      width: 100%;
+      height: 5.25rem;
+    }
+    &-opener {
+      width: 100vw;
+      height: 0;
+      visibility: hidden;
+      position: fixed;
+      inset: 0;
+      &-item {
+        min-width: 25.5%;
+        height: 5.25rem;
+        @include responsive(Ps) {
+          min-width: 41%;
+        }
+      }
+    }
+  }
+  &__btn {
+    height: 3.5rem;
+    &:hover {
+      cursor: pointer;
+      background-color: $gray-light;
+      color: $black !important;
+    }
+  }
+  &__list {
+    &-underline {
+      width: 0;
+      height: 0.25rem;
+      background-color: $primary;
+      transition: all 250ms ease-in-out;
+    }
+    &-item:hover &-underline {
+      width: 100%;
+    }
+  }
+  &__menu {
+    width: 82%;
+    height: 62vh;
+    top: 3rem;
+    right: 1.5rem;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0 0 0.2rem $dark;
+    z-index: 50;
+    @include responsive(Laptop) {
+      width: 99.5%;
+    }
+    & * {
+      opacity: 0;
+    }
+    &-categories {
+      direction: ltr;
+      &::-webkit-scrollbar {
+        width: 5px;
+        background-color: $white;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 3px;
+        height: 5px;
+        background-color: $gray;
+        border-radius: 25px;
+      }
+    }
+    &-products {
+      &::-webkit-scrollbar {
+        width: 5px;
+        background-color: $white;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 3px;
+        height: 20px;
+        background-color: $gray;
+        border-radius: 25px;
+      }
+    }
+    &-category {
+      width: 100%;
+      height: 8%;
+      padding: 2.3rem 0.7rem;
+      @include displayFlex(flex-start);
+      flex-direction: row-reverse;
+      &:hover {
+        background-color: $white;
+        color: $primary !important;
+      }
+    }
+    &-link {
+      color: $black;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      &::before {
+        content: "";
+        background-color: $primary-dark;
+        width: 0.1rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}

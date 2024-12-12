@@ -1,0 +1,39 @@
+.homeBtn {
+  &__link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    color: $white;
+    position: fixed;
+    left: 2.75rem;
+    bottom: 1.75rem;
+    z-index: 105;
+    @include responsive(Th) {
+      bottom: 10.5rem;
+    }
+    @include responsive(Ts) {
+      bottom: 12rem;
+    }
+    @include responsive(Ph) {
+      bottom: 10rem;
+    }
+    &-icon {
+      font-size: 15px;
+    }
+  }
+}
+
+.main__bg {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+#HeaderTopRow {
+  @media screen and (min-width: 75em) {
+    visibility: visible !important;
+  }
+}

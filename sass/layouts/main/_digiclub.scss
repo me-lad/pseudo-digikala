@@ -1,0 +1,23 @@
+.digiclub {
+  &__container {
+    background: linear-gradient(270deg, $secondary-dark 0, $secondary 100%);
+    &-item {
+      width: 33%;
+      @include responsive(Ph) {
+        width: 48%;
+        border-radius: 0.5rem !important;
+      }
+      @include responsive(Ps) {
+        width: 65%;
+      }
+    }
+    &-text {
+      @include responsive(Ph) {
+        font-size: 1.9rem !important;
+      }
+      @include responsive(Ps) {
+        font-size: 1.65rem !important;
+      }
+    }
+  }
+}

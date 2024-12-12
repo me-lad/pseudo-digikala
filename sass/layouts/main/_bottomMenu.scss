@@ -1,0 +1,18 @@
+// BottomMenu Styles
+.bottomMenu {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  @include responsive(Ph) {
+    height: 70px;
+  }
+  @include responsive(Ps) {
+    height: 65px;
+  }
+  &__home {
+    color: $dark;
+  }
+  &__category {
+    color: $gray;
+  }
+}

@@ -1,0 +1,3401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digikala</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="public/images/logo/footerlogo192.png" />
+    <link rel="stylesheet" href="public/css/style.min.css" />
+  </head>
+  <body>
+    <!--! Header -->
+    <header id="Header" class="header w-100">
+      <!--! Header Banner -->
+      <section id="HeaderSec1">
+        <div class="header__banner container-fluid p-0 cup">
+          <img class="img-fluid" src="public/images/banners/offbanner.gif" alt="Banner" />
+        </div>
+      </section>
+      <!--! Header Main -->
+      <section id="HeaderSec2">
+        <div class="container-fluid">
+          <div id="HeaderTopRow" class="row px-4 py-3 ai-c">
+            <div class="col col-md-9 col-xl-10 d-flex ai-c gap-4 jc-c justify-content-md-start">
+              <a class="d-none d-sm-block" href="#">
+                <img class="img-fluid" src="public/images/logo/logo.svg" alt="Digikala" />
+              </a>
+              <div
+                class="header__searchBox position-relative bg-gray-light rounded-4 d-flex ai-c px-4 gap-3 fs-14"
+              >
+                <input
+                  class="w-100 h-100 bg-transparent px-5 text-gray-dark border-0 out-off"
+                  placeholder="جستجو"
+                />
+                <i class="fas fa-search position-absolute text-gray"></i>
+              </div>
+              <div
+                class="header__search position-relative bg-gray-light rounded-4 d-flex ai-c px-4 gap-3 fs-14 d-md-none"
+              >
+                <input
+                  class="w-100 h-100 bg-transparent px-5 text-gray-dark border-0 out-off"
+                  placeholder="جستجو"
+                />
+                <i class="fas fa-search position-absolute text-gray"></i>
+                <div class="header__search-opener bg-white z-53 px-8 d-xl-none">
+                  <div class="border-bottom border-1 border-secondary pt-5 pb-3 d-flex ai-c gap-4">
+                    <div class="header__search-close" onclick="headerSearchCloseClickHandler()">
+                      <i class="fas fa-arrow-right fs-20 text-gray-dark"></i>
+                    </div>
+                    <input class="text-gray fs-16 fw-bold out-off border-0 w-100" placeholder="جستجو" />
+                  </div>
+                  <div class="mt-8 header__search-last">
+                    <div class="d-flex ai-c jc-sb">
+                      <div class="d-flex gap-4 ai-c">
+                        <i class="fas fa-clock text-gray-dark fs-24"></i>
+                        <span class="fs-16 fw-bold text-grayBlue-dark">آخرین جستجوهای شما</span>
+                      </div>
+                      <div class="header__search-trash" onclick="headerSearchTrashClickHandler()">
+                        <i class="fas fa-trash-alt fs-24 text-gray-dark cup"></i>
+                      </div>
+                    </div>
+                    <div class="w-100 d-flex ai-c gap-4 mt-5 me-5 overflow-x-auto pb-4">
+                      <div
+                        class="header__search-opener-item border border-1 border-gray rounded-pill f-center gap-2 cup"
+                      >
+                        <span class="fs-13">کفش روزمره زنانه ونس</span>
+                        <i class="fas fa-chevron-left fs-15"></i>
+                      </div>
+                      <div
+                        class="header__search-opener-item border border-1 border-gray rounded-pill f-center gap-2 cup"
+                      >
+                        <span class="fs-13">کابل شارژ ساعت</span>
+                        <i class="fas fa-chevron-left fs-15"></i>
+                      </div>
+                      <div
+                        class="header__search-opener-item border border-1 border-gray rounded-pill f-center gap-2 cup"
+                      >
+                        <span class="fs-13">رومیزی طلقی</span>
+                        <i class="fas fa-chevron-left fs-15"></i>
+                      </div>
+                      <div
+                        class="header__search-opener-item border border-1 border-gray rounded-pill f-center gap-2 cup"
+                      >
+                        <span class="fs-13">گوشواره زنانه</span>
+                        <i class="fas fa-chevron-left fs-15"></i>
+                      </div>
+                      <div
+                        class="header__search-opener-item border border-1 border-gray rounded-pill f-center gap-2 cup"
+                      >
+                        <span class="fs-13">موس پد</span>
+                        <i class="fas fa-chevron-left fs-15"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-8">
+                    <div class="d-flex ai-c gap-4">
+                      <i class="fas fa-fire-flame-curved fs-26 text-orange"></i>
+                      <span class="fs-16 fw-bold text-grayBlue-dark">جستجوهای پرطرفدار</span>
+                    </div>
+                    <div class="w-100 d-flex ai-c gap-4 mt-5 me-5 overflow-x-auto pb-4">
+                      <div
+                        class="header__search-opener-item border border-1 border-gray rounded-pill f-center gap-2 cup"
+                      >
+                        <span class="fs-13">کفش روزمره زنانه ونس</span>
+                        <i class="fas fa-chevron-left fs-15"></i>
+                      </div>
+                      <div
+                        class="header__search-opener-item border border-1 border-gray rounded-pill f-center gap-2 cup"
+                      >
+                        <span class="fs-13">کابل شارژ ساعت</span>
+                        <i class="fas fa-chevron-left fs-15"></i>
+                      </div>
+                      <div
+                        class="header__search-opener-item border border-1 border-gray rounded-pill f-center gap-2 cup"
+                      >
+                        <span class="fs-13">رومیزی طلقی</span>
+                        <i class="fas fa-chevron-left fs-15"></i>
+                      </div>
+                      <div
+                        class="header__search-opener-item border border-1 border-gray rounded-pill f-center gap-2 cup"
+                      >
+                        <span class="fs-13">گوشواره زنانه</span>
+                        <i class="fas fa-chevron-left fs-15"></i>
+                      </div>
+                      <div
+                        class="header__search-opener-item border border-1 border-gray rounded-pill f-center gap-2 cup"
+                      >
+                        <span class="fs-13">موس پد</span>
+                        <i class="fas fa-chevron-left fs-15"></i>
+                      </div>
+                      <div
+                        class="header__search-opener-item border border-1 border-gray rounded-pill f-center gap-2 cup"
+                      >
+                        <span class="fs-13">ماگ طرح دار</span>
+                        <i class="fas fa-chevron-left fs-15"></i>
+                      </div>
+                      <div
+                        class="header__search-opener-item border border-1 border-gray rounded-pill f-center gap-2 cup"
+                      >
+                        <span class="fs-13">کاپشن مردانه</span>
+                        <i class="fas fa-chevron-left fs-15"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-none col-3 col-xl-2 d-md-flex ai-c gap-3 jc-end">
+              <div
+                class="header__btn d-flex ai-c gap-2 px-3 my-transition rounded-2 text-gray-dark border border-gray-dark"
+              >
+                <a class="text-gray-dark" href="login.html">
+                  <i class="fas fa-arrow-right-to-bracket fs-13"></i>
+                  <span class="fs-13 fw-bold">ورود | ثبت نام</span>
+                </a>
+              </div>
+              <div
+                class="header__btn text-gray-dark f-center px-4 rounded-2 my-transition border border-gray-dark"
+              >
+                <i class="fas fa-cart-shopping fs-14"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--! Header Nav -->
+        <nav class="container-fluid d-none d-xl-block">
+          <div id="HeaderBottomRow" class="row px-2 px-lg-5 pt-3 ai-c">
+            <div class="col-10 d-flex gap-5 ai-c position-relative">
+              <div class="header__justify cup d-flex flex-column gap-2">
+                <div class="d-flex ai-c gap-2 fs-14 fw-bold">
+                  <i class="fas fa-align-justify"></i>
+                  <span>دسته بندی کالاها</span>
+                </div>
+                <span class="header__list-underline header__list-underline-justify"></span>
+              </div>
+              <div class="header__menu row position-absolute rounded-bottom-4 overflow-hidden">
+                <ul class="header__menu-categories col-2 h-100 p-0 bg-gray-light cup overflow-auto">
+                  <li class="header__menu-category fs-14 gap-3 my-transition pe-4">
+                    <i class="fa fa-mobile-alt"></i>
+                    <span>موبایل</span>
+                  </li>
+                  <li class="header__menu-category fs-14 gap-3 my-transition pe-4">
+                    <i class="fa fa-laptop"></i>
+                    <span>کالای دیجیتال</span>
+                  </li>
+                  <li class="header__menu-category fs-14 gap-3 my-transition pe-4">
+                    <i class="fas fa-home-alt"></i>
+                    <span>خانه و آشپزخانه</span>
+                  </li>
+                  <li class="header__menu-category fs-14 gap-3 my-transition pe-4">
+                    <i class="fa fa-lightbulb"></i>
+                    <span>لوازم خانگی برقی</span>
+                  </li>
+                  <li class="header__menu-category fs-14 gap-3 my-transition pe-4">
+                    <i class="fa fa-shirt"></i>
+                    <span>مد و پوشاک</span>
+                  </li>
+                  <li class="header__menu-category fs-14 gap-3 my-transition pe-4">
+                    <i class="fas fa-notes-medical"></i>
+                    <span>زیبایی و سلامت</span>
+                  </li>
+                  <li class="header__menu-category fs-14 gap-3 my-transition pe-4">
+                    <i class="fa fa-store"></i>
+                    <span>کالاهای سوپرمارکتی</span>
+                  </li>
+                  <li class="header__menu-category fs-14 gap-3 my-transition pe-4">
+                    <i class="fas fa-screwdriver-wrench"></i>
+                    <span>ابزارآلات و تجهیزات</span>
+                  </li>
+                  <li class="header__menu-category fs-14 gap-3 my-transition pe-4">
+                    <i class="fas fa-credit-card"></i>
+                    <span>کارت هدیه</span>
+                  </li>
+                  <li class="header__menu-category fs-14 gap-3 my-transition pe-4">
+                    <i class="fas fa-pen-ruler"></i>
+                    <span>کتاب و لوازم تحریر</span>
+                  </li>
+                  <li class="header__menu-category fs-14 gap-3 my-transition pe-4">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>ورزش و سفر</span>
+                  </li>
+                </ul>
+                <div class="header__menu-products col-10 h-100 p-0 bg-white overflow-auto">
+                  <div class="px-5 pt-4">
+                    <a class="text-secondary-dark fs-13 d-flex ai-c gap-2" href="#">
+                      <span class="fw-bold">همه محصولات موبایل</span>
+                      <i class="fas fa-chevron-left fs-12"></i>
+                    </a>
+                  </div>
+                  <div class="px-4 py-5 d-flex gap-6">
+                    <div>
+                      <a class="header__menu-link my-transition hover" href="#">
+                        <span>برند های مختلف گوشی موبایل</span>
+                        <i class="fas fa-chevron-left fs-12"></i>
+                      </a>
+                      <ul>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی آیفون </a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی سامسونگ </a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی شیائومی </a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی نوکیا </a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی ریلمی </a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition">گوشی آنر</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی موتورولا </a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی ناتینگ فون </a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی جی پلاس </a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی سونی</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی داریا</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی جنرال لوکس</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی جی ال ایکس</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <a class="header__menu-link my-transition hover" href="#">
+                        <span>گوش بر اساس قیمت</span>
+                        <i class="fas fa-chevron-left fs-12"></i>
+                      </a>
+                      <ul>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی موبایل اقتصادی</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی موبایل قسطی</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی تا 2 میلیون</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی تا 5 میلیون</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی تا 7 میلیون</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی تا 10 میلیون</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی تا 15 میلیون</a>
+                        </li>
+                      </ul>
+                      <a class="header__menu-link my-transition mt-5 hover" href="#">
+                        <span>گوشی بر اساس عملکرد</span>
+                        <i class="fas fa-chevron-left fs-12"></i>
+                      </a>
+                      <ul>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی گیمینگ</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی 5جی</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی دکمه ای</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی ضد آب</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی مناسب عکاسی</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <a class="header__menu-link my-transition hover" href="#">
+                        <span>گوش بر اساس قیمت</span>
+                        <i class="fas fa-chevron-left fs-12"></i>
+                      </a>
+                      <ul>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی موبایل اقتصادی</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی موبایل قسطی</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی تا 2 میلیون</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی تا 5 میلیون</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی تا 7 میلیون</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی تا 10 میلیون</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی تا 15 میلیون</a>
+                        </li>
+                      </ul>
+                      <a class="header__menu-link my-transition mt-5 hover" href="#">
+                        <span>گوشی بر اساس عملکرد</span>
+                        <i class="fas fa-chevron-left fs-12"></i>
+                      </a>
+                      <ul>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی گیمینگ</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی 5جی</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی دکمه ای</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی ضد آب</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی مناسب عکاسی</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <a class="header__menu-link my-transition hover" href="#">
+                        <span>گوش بر اساس قیمت</span>
+                        <i class="fas fa-chevron-left fs-12"></i>
+                      </a>
+                      <ul>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی موبایل اقتصادی</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی موبایل قسطی</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی تا 2 میلیون</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی تا 5 میلیون</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی تا 7 میلیون</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی تا 10 میلیون</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی تا 15 میلیون</a>
+                        </li>
+                      </ul>
+                      <a class="header__menu-link my-transition mt-5 hover" href="#">
+                        <span>گوشی بر اساس عملکرد</span>
+                        <i class="fas fa-chevron-left fs-12"></i>
+                      </a>
+                      <ul>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی گیمینگ</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی 5جی</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی دکمه ای</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی ضد آب</a>
+                        </li>
+                        <li class="my-3">
+                          <a class="text-gray-dark fs-13 cup hover my-transition"> گوشی مناسب عکاسی</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="d-flex ai-c gap-4">
+                <li class="d-flex flex-column gap-2 header__list-item">
+                  <a class="text-gray-dark fs-13 d-flex ai-c gap-2 border-end border-gray pe-3" href="#">
+                    <i class="fas fa-tag"></i>
+                    <span>شگفت انگیزها</span>
+                  </a>
+                  <span class="header__list-underline"></span>
+                </li>
+                <li class="d-flex flex-column gap-2 header__list-item">
+                  <a class="text-gray-dark fs-13 d-flex ai-c gap-2" href="#">
+                    <i class="fas fa-shop"></i>
+                    <span>سوپرمارکت</span>
+                  </a>
+                  <span class="header__list-underline"></span>
+                </li>
+                <li class="d-flex flex-column gap-2 header__list-item">
+                  <a class="text-gray-dark fs-13 d-flex ai-c gap-2" href="#">
+                    <i class="fas fa-credit-card"></i>
+                    <span>کارت هدیه</span>
+                  </a>
+                  <span class="header__list-underline"></span>
+                </li>
+                <li class="d-flex flex-column gap-2 header__list-item">
+                  <a class="text-gray-dark fs-13 d-flex ai-c gap-2" href="#">
+                    <i class="fas fa-money-bill"></i>
+                    <span>پرفروش ترین ها</span>
+                  </a>
+                  <span class="header__list-underline"></span>
+                </li>
+                <li class="d-flex flex-column gap-2 header__list-item">
+                  <a class="text-gray-dark fs-13 d-flex ai-c gap-2" href="#">
+                    <i class="fas fa-percent"></i>
+                    <span>تخفیف ها و پیشنهاد ها</span>
+                  </a>
+                  <span class="header__list-underline"></span>
+                </li>
+                <li class="d-flex flex-column gap-2 header__list-item">
+                  <a class="text-gray-dark fs-13 d-flex ai-c gap-2 border-end border-gray pe-3" href="#">
+                    <span>سوالی دارید؟</span>
+                  </a>
+                  <span class="header__list-underline"></span>
+                </li>
+                <li class="d-flex flex-column gap-2 header__list-item">
+                  <a class="text-gray-dark fs-13 d-flex ai-c gap-2" href="#">
+                    <span>در دیجی کالا بفروشید!</span>
+                  </a>
+                  <span class="header__list-underline"></span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-2 d-none d-xxl-flex ai-c gap-3 px-5 mb-1">
+              <i class="fas fa-location-crosshairs text-gray-dark fs-13"></i>
+              <a class="text-gray-dark fs-13" href="#">لطفا شهر خود را انتخاب کنید</a>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </header>
+    <!--! Header End -->
+
+    <!--! Main -->
+    <main id="Main" class="main position-relative">
+      <!--! Story Section -->
+      <section class="story pt-6 px-0">
+        <div class="container-fluid container-xl px-3">
+          <div class="swiper mySwiper5">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none"
+                      src="public/images/story-slider/story1.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">جذاب ترین های شیائومی</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none"
+                      src="public/images/story-slider/story2.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">هیتر برای سرمای زمستون</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none object-fit-cover"
+                      src="public/images/story-slider/story3.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">یه هدفون میانگرا</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none"
+                      src="public/images/story-slider/story4.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">کپی برابر اصل واکاکو!</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none"
+                      src="public/images/story-slider/story5.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">این لپ تاپ خوراک بازاست</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none"
+                      src="public/images/story-slider/story6.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">بررسی گوشی Xiaomi 13T📱</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none"
+                      src="public/images/story-slider/story7.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">این پاوربانکه یا ویدئو لایت؟</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none"
+                      src="public/images/story-slider/story8.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">کاغذ دیجیتال رنگی شیائومی</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none"
+                      src="public/images/story-slider/story9.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">هدفونی که حرف نداره</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none"
+                      src="public/images/story-slider/story10.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">داستان یک جنایت هولناک</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none"
+                      src="public/images/story-slider/story11.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">محصولی متفاوت از لانکا</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none"
+                      src="public/images/story-slider/story12.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">قیچی بیلاتس</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none"
+                      src="public/images/story-slider/story13.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">کپی برابر اصل واکاکو!</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none"
+                      src="public/images/story-slider/story14.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">بررسی ماکت پورشه</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none"
+                      src="public/images/story-slider/story15.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">پایه ای با طراحی ساده و مینیمال اما خوش ساخت</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none"
+                      src="public/images/story-slider/story17.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">خرما فندقی 🔥</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="story__item d-flex flex-column ai-c gap-2">
+                  <div class="story__item-circle rounded-circle p-1">
+                    <img
+                      class="w-100 h-100 rounded-circle user-select-none"
+                      src="public/images/story-slider/story16.jpg"
+                      alt="Digikala"
+                    />
+                  </div>
+                  <div class="textBreakkit-2 lh-sm w-100 text-center">
+                    <span class="text-grayBlue fs-12">قوی ترین پرتابل هارمن کاردن 😍</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next slider-btn d-none d-md-flex"></div>
+            <div class="swiper-button-prev slider-btn d-none d-md-flex"></div>
+          </div>
+        </div>
+      </section>
+      <!--! Story Section End -->
+
+      <!--! Slider Section -->
+      <section class="slider mt-6 position-relative overflow-hidden">
+        <div class="container-fluid p-0">
+          <div class="swiper2 mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="img-fluid user-select-none" src="public/images/slider/slider1.webp" alt="Digikala" />
+              </div>
+              <div class="swiper-slide">
+                <img class="img-fluid user-select-none" src="public/images/slider/slider6.webp" alt="Digikala" />
+              </div>
+              <div class="swiper-slide">
+                <img class="img-fluid user-select-none" src="public/images/slider/slider3.webp" alt="Digikala" />
+              </div>
+              <div class="swiper-slide">
+                <img class="img-fluid user-select-none" src="public/images/slider/slider5.webp" alt="Digikala" />
+              </div>
+              <div class="swiper-slide">
+                <img class="img-fluid user-select-none" src="public/images/slider/slider4.webp" alt="Digikala" />
+              </div>
+              <div class="swiper-slide">
+                <img class="img-fluid user-select-none" src="public/images/slider/slider8.webp" alt="Digikala" />
+              </div>
+              <div class="swiper-slide">
+                <img class="img-fluid user-select-none" src="public/images/slider/slider9.webp" />
+              </div>
+              <div class="swiper-slide">
+                <img class="img-fluid user-select-none" src="public/images/slider/slider7.gif" alt="Digikala" />
+              </div>
+            </div>
+            <div class="slider__btnGroup d-none d-md-block">
+              <div class="swiper-button-prev slider-btn"></div>
+              <div class="swiper-button-next slider-btn"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="autoplay-progress position-absolute slider__timer">
+              <svg viewBox="0 0 48 48"></svg>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--! Slider Section End -->
+
+      <!--! Frequently Section -->
+      <section class="frequently mt-6 px-3 px-xl-0">
+        <div class="container-fluid container-xl p-0">
+          <div class="row ai-c row-gap-6">
+            <div class="col-3 col-lg">
+              <a class="frequently__item d-flex flex-column gap-2 ai-c" href="#">
+                <img class="frequently__item-image" src="public/images/frequently/brands1.png" alt="Digi" />
+                <span class="fs-12 text-grayBlue">دیجی کالا جت</span>
+              </a>
+            </div>
+            <div class="col-3 col-lg">
+              <a class="frequently__item d-flex flex-column gap-2 ai-c" href="#">
+                <img class="frequently__item-image" src="public/images/frequently/brands2.png" alt="Digi" />
+                <span class="fs-12 text-grayBlue">دیجی پی</span>
+              </a>
+            </div>
+            <div class="col-3 col-lg">
+              <a class="frequently__item d-flex flex-column gap-2 ai-c" href="#">
+                <img class="frequently__item-image" src="public/images/frequently/brands3.png" alt="Digi" />
+                <span class="fs-12 text-grayBlue">حراج استایل</span>
+              </a>
+            </div>
+            <div class="col-3 col-lg">
+              <a class="frequently__item d-flex flex-column gap-2 ai-c" href="#">
+                <img class="frequently__item-image" src="public/images/frequently/brands4.png" alt="Digi" />
+                <span class="fs-12 text-grayBlue">کالابرگ الکترونیکی</span>
+              </a>
+            </div>
+            <div class="col-3 col-lg">
+              <a class="frequently__item d-flex flex-column gap-2 ai-c" href="#">
+                <img class="frequently__item-image" src="public/images/frequently/brands5.png" alt="Digi" />
+                <span class="fs-12 text-grayBlue">به خاطر بودنش</span>
+              </a>
+            </div>
+            <div class="col-3 col-lg">
+              <a class="frequently__item d-flex flex-column gap-2 ai-c" href="#">
+                <img class="frequently__item-image" src="public/images/frequently/brands6.png" alt="Digi" />
+                <span class="fs-12 text-grayBlue">چرخ و بخت</span>
+              </a>
+            </div>
+            <div class="col-3 col-lg">
+              <a class="frequently__item d-flex flex-column gap-2 ai-c" href="#">
+                <img class="frequently__item-image" src="public/images/frequently/brands7.png" alt="Digi" />
+                <span class="fs-12 text-grayBlue">پیش بینی بزرگ</span>
+              </a>
+            </div>
+            <div class="col-3 col-lg frequently__more" onclick="frequentlyMoreOpenerclickHandler()">
+              <div class="frequently__item d-flex flex-column gap-2 ai-c cup">
+                <img
+                  class="frequently__item-image bg-gray-light rounded-circle p-3"
+                  src="public/images/frequently/footer-app4.svg"
+                  alt="Digi"
+                />
+                <span class="fs-12 text-grayBlue">بیشتر</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="frequently__bg">
+          <div class="frequently__service py-5 bg-white overflow-hidden rounded-4">
+            <div class="frequently__service-title d-flex flex-column">
+              <div class="d-flex jc-sb ai-c border-bottom border-1 border-gray pb-3">
+                <div>
+                  <i class="fas fa-caret-down text-primary-dark"></i>
+                  <span class="text-grayBlue-dark fw-bold fs-15">خدمات دیجی کالا</span>
+                </div>
+                <div class="frequently__service-close" onclick="frequentlyMoreCloserclickHandler()">
+                  <i class="fas fa-xmark cup"></i>
+                </div>
+              </div>
+            </div>
+            <div class="frequently__service-description overflow-auto mt-2 d-flex flex-column py-2">
+              <div class="frequently__service-description-inside">
+                <div class="row border-bottom border-1 border-gray pb-3">
+                  <div class="col-3 col-sm-2 p-0 d-flex flex-column ai-c gap-2 mt-5 cup">
+                    <img src="public/images/more/1.png" alt="Digikala" />
+                    <span class="fs-13 text-grayBlue">دیجیکالا</span>
+                  </div>
+                  <div class="col-3 col-sm-2 p-0 d-flex flex-column ai-c gap-2 mt-5 cup">
+                    <img src="public/images/more/2.png" alt="Digikala" />
+                    <span class="fs-13 text-grayBlue">دیجیکالا</span>
+                  </div>
+                  <div class="col-3 col-sm-2 p-0 d-flex flex-column ai-c gap-2 mt-5 cup">
+                    <img src="public/images/more/3.png" alt="Digikala" />
+                    <span class="fs-13 text-grayBlue">دیجیکالا</span>
+                  </div>
+                  <div class="col-3 col-sm-2 p-0 d-flex flex-column ai-c gap-2 mt-5 cup">
+                    <img src="public/images/more/4.png" alt="Digikala" />
+                    <span class="fs-13 text-grayBlue">دیجیکالا</span>
+                  </div>
+                  <div class="col-3 col-sm-2 p-0 d-flex flex-column ai-c gap-2 mt-5 cup">
+                    <img src="public/images/more/5.png" alt="Digikala" />
+                    <span class="fs-13 text-grayBlue">دیجیکالا</span>
+                  </div>
+                  <div class="col-3 col-sm-2 p-0 d-flex flex-column ai-c gap-2 mt-5 cup">
+                    <img src="public/images/more/6.png" alt="Digikala" />
+                    <span class="fs-13 text-grayBlue">دیجیکالا</span>
+                  </div>
+                  <div class="col-3 col-sm-2 p-0 d-flex flex-column ai-c gap-2 mt-5 cup">
+                    <img src="public/images/more/7.png" alt="Digikala" />
+                    <span class="fs-13 text-grayBlue">دیجیکالا</span>
+                  </div>
+                  <div class="col-3 col-sm-2 p-0 d-flex flex-column ai-c gap-2 mt-5 cup">
+                    <img src="public/images/more/8.png" alt="Digikala" />
+                    <span class="fs-13 text-grayBlue">دیجیکالا</span>
+                  </div>
+                  <div class="col-3 col-sm-2 p-0 d-flex flex-column ai-c gap-2 mt-5 cup">
+                    <img src="public/images/more/9.png" alt="Digikala" />
+                    <span class="fs-13 text-grayBlue">دیجیکالا</span>
+                  </div>
+                  <div class="col-3 col-sm-2 p-0 d-flex flex-column ai-c gap-2 mt-5 cup">
+                    <img src="public/images/more/10.png" alt="Digikala" />
+                    <span class="fs-13 text-grayBlue">دیجیکالا</span>
+                  </div>
+                  <div class="col-3 col-sm-2 p-0 d-flex flex-column ai-c gap-2 mt-5 cup">
+                    <img src="public/images/more/11.png" alt="Digikala" />
+                    <span class="fs-13 text-grayBlue">دیجیکالا</span>
+                  </div>
+                  <div class="col-3 col-sm-2 p-0 d-flex flex-column ai-c gap-2 mt-5 cup">
+                    <img src="public/images/more/12.jpg" alt="Digikala" />
+                    <span class="fs-13 text-grayBlue">دیجیکالا</span>
+                  </div>
+                  <div class="col-3 col-sm-2 p-0 d-flex flex-column ai-c gap-2 mt-5 cup">
+                    <img src="public/images/more/13.png" alt="Digikala" />
+                    <span class="fs-13 text-grayBlue">دیجیکالا</span>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <h4 class="fs-14 text-gray-dark fw-bold">سرویس‌های گروه دیجی‌کالا</h4>
+                  <div class="row g-3 mt-2 jc-c">
+                    <div class="col-11 col-sm-6">
+                      <div class="d-flex jc-sb ai-c border border-1 border-gray-dark rounded-4 pt-3 pb-5 px-3 cup">
+                        <div class="d-flex gap-3 mt-2 ai-c">
+                          <img src="public/images/more/service/1.png" alt="Digikala" />
+                          <div>
+                            <h5 class="text-grayBlue-dark fs-14">دیجی کالا جت</h5>
+                            <span class="text-gray-dark fs-12 d-block mt-2">خرید فوری از سوپرمارکت های اطراف</span>
+                          </div>
+                        </div>
+                        <i class="fas fa-arrow-left mt-2"></i>
+                      </div>
+                    </div>
+                    <div class="col-11 col-sm-6">
+                      <div class="d-flex jc-sb ai-c border border-1 border-gray-dark rounded-4 pt-3 pb-5 px-3 cup">
+                        <div class="d-flex gap-3 mt-2 ai-c">
+                          <img src="public/images/more/service/2.png" alt="Digikala" />
+                          <div>
+                            <h5 class="text-grayBlue-dark fs-14">دیجی کالا جت</h5>
+                            <span class="text-gray-dark fs-12 d-block mt-2">خرید فوری از سوپرمارکت های اطراف</span>
+                          </div>
+                        </div>
+                        <i class="fas fa-arrow-left mt-2"></i>
+                      </div>
+                    </div>
+                    <div class="col-11 col-sm-6">
+                      <div class="d-flex jc-sb ai-c border border-1 border-gray-dark rounded-4 pt-3 pb-5 px-3 cup">
+                        <div class="d-flex gap-3 mt-2 ai-c">
+                          <img src="public/images/more/service/3.png" alt="Digikala" />
+                          <div>
+                            <h5 class="text-grayBlue-dark fs-14">دیجی کالا جت</h5>
+                            <span class="text-gray-dark fs-12 d-block mt-2">خرید فوری از سوپرمارکت های اطراف</span>
+                          </div>
+                        </div>
+                        <i class="fas fa-arrow-left mt-2"></i>
+                      </div>
+                    </div>
+                    <div class="col-11 col-sm-6">
+                      <div class="d-flex jc-sb ai-c border border-1 border-gray-dark rounded-4 pt-3 pb-5 px-3 cup">
+                        <div class="d-flex gap-3 mt-2 ai-c">
+                          <img src="public/images/more/service/4.png" alt="Digikala" />
+                          <div>
+                            <h5 class="text-grayBlue-dark fs-14">دیجی کالا جت</h5>
+                            <span class="text-gray-dark fs-12 d-block mt-2">خرید فوری از سوپرمارکت های اطراف</span>
+                          </div>
+                        </div>
+                        <i class="fas fa-arrow-left mt-2"></i>
+                      </div>
+                    </div>
+                    <div class="col-11 col-sm-6">
+                      <div class="d-flex jc-sb ai-c border border-1 border-gray-dark rounded-4 pt-3 pb-5 px-3 cup">
+                        <div class="d-flex gap-3 mt-2 ai-c">
+                          <img src="public/images/more/service/5.png" alt="Digikala" />
+                          <div>
+                            <h5 class="text-grayBlue-dark fs-14">دیجی کالا جت</h5>
+                            <span class="text-gray-dark fs-12 d-block mt-2">خرید فوری از سوپرمارکت های اطراف</span>
+                          </div>
+                        </div>
+                        <i class="fas fa-arrow-left mt-2"></i>
+                      </div>
+                    </div>
+                    <div class="col-11 col-sm-6">
+                      <div class="d-flex jc-sb ai-c border border-1 border-gray-dark rounded-4 pt-3 pb-5 px-3 cup">
+                        <div class="d-flex gap-3 mt-2 ai-c">
+                          <img src="public/images/more/service/6.png" alt="Digikala" />
+                          <div>
+                            <h5 class="text-grayBlue-dark fs-14">دیجی کالا جت</h5>
+                            <span class="text-gray-dark fs-12 d-block mt-2">خرید فوری از سوپرمارکت های اطراف</span>
+                          </div>
+                        </div>
+                        <i class="fas fa-arrow-left mt-2"></i>
+                      </div>
+                    </div>
+                    <div class="col-11 col-sm-6">
+                      <div class="d-flex jc-sb ai-c border border-1 border-gray-dark rounded-4 pt-3 pb-5 px-3 cup">
+                        <div class="d-flex gap-3 mt-2 ai-c">
+                          <img src="public/images/more/service/7.png" alt="Digikala" />
+                          <div>
+                            <h5 class="text-grayBlue-dark fs-14">دیجی کالا جت</h5>
+                            <span class="text-gray-dark fs-12 d-block mt-2">خرید فوری از سوپرمارکت های اطراف</span>
+                          </div>
+                        </div>
+                        <i class="fas fa-arrow-left mt-2"></i>
+                      </div>
+                    </div>
+                    <div class="col-11 col-sm-6">
+                      <div class="d-flex jc-sb ai-c border border-1 border-gray-dark rounded-4 pt-3 pb-5 px-3 cup">
+                        <div class="d-flex gap-3 mt-2 ai-c">
+                          <img src="public/images/more/service/8.png" alt="Digikala" />
+                          <div>
+                            <h5 class="text-grayBlue-dark fs-14">دیجی کالا جت</h5>
+                            <span class="text-gray-dark fs-12 d-block mt-2">خرید فوری از سوپرمارکت های اطراف</span>
+                          </div>
+                        </div>
+                        <i class="fas fa-arrow-left mt-2"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--! Frequently Section End -->
+
+      <!--! Discount Section -->
+      <section class="discount mt-6 px-0">
+        <div class="container-fluid container-xl px-4 py-5 discount__container rounded-5">
+          <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide discount__container-item bg-transparent f-center flex-column gap-2">
+                <img class="discount__container-image" src="public/images/discount/Amazings.svg" alt="Digikala" />
+                <img
+                  class="discount__container-image"
+                  src="public/images/discount/percent-ice.webp"
+                  alt="Digikala"
+                />
+                <span class="watch-all fs-13 text-white jc-c d-flex gap-2 ai-c cup mt-2 fw-bold">مشاهده همه</span>
+              </div>
+              <div
+                class="swiper-slide discount__container-item rounded-end-4 py-4 px-2 d-flex flex-column ai-c gap-2 cup"
+              >
+                <div class="p-3">
+                  <img
+                    class="discount__container-productImage"
+                    src="public/images/discount/scroll1.webp"
+                    alt="Digikala"
+                  />
+                </div>
+                <div class="d-flex gap-5 ai-c fw-bold">
+                  <span class="badge rounded-pill bg-primary-dark px-3 py-1 fs-10 text-white">۶٪</span>
+                  <span class="fs-13 fw-bold">۶,۰۰۰,۰۰۰ <small class="fs-10">تومان</small></span>
+                </div>
+                <div>
+                  <span class="text-gray text-decoration-line-through fs-12">۷,۵۰۰,۰۰۰</span>
+                </div>
+                <div
+                  class="progress w-75 mt-2 position-relative rounded-pill overflow-hidden bg-gray-light"
+                  style="height: 3%"
+                >
+                  <div class="progress-bar w-50 bg-primary-dark h-100 position-absolute start-0"></div>
+                </div>
+              </div>
+              <div class="swiper-slide discount__container-item py-4 px-2 d-flex flex-column ai-c gap-2 cup">
+                <div class="p-3">
+                  <img
+                    class="discount__container-productImage"
+                    src="public/images/discount/scroll2.webp"
+                    alt="Digikala"
+                  />
+                </div>
+                <div class="d-flex gap-5 ai-c fw-bold">
+                  <span class="badge rounded-pill bg-primary-dark px-3 py-1 fs-10 text-white">۶٪</span>
+                  <span class="fs-13 fw-bold">۶,۰۰۰,۰۰۰ <small class="fs-10">تومان</small></span>
+                </div>
+                <div>
+                  <span class="text-gray text-decoration-line-through fs-12">۷,۵۰۰,۰۰۰</span>
+                </div>
+                <div
+                  class="progress w-75 mt-2 position-relative rounded-pill overflow-hidden bg-gray-light"
+                  style="height: 3%"
+                >
+                  <div class="progress-bar w-50 bg-primary-dark h-100 position-absolute start-0"></div>
+                </div>
+              </div>
+              <div class="swiper-slide discount__container-item py-4 px-2 d-flex flex-column ai-c gap-2 cup">
+                <div class="p-3">
+                  <img
+                    class="discount__container-productImage"
+                    src="public/images/discount/scroll3.webp"
+                    alt="Digikala"
+                  />
+                </div>
+                <div class="d-flex gap-5 ai-c fw-bold">
+                  <span class="badge rounded-pill bg-primary-dark px-3 py-1 fs-10 text-white">۶٪</span>
+                  <span class="fs-13 fw-bold">۶,۰۰۰,۰۰۰ <small class="fs-10">تومان</small></span>
+                </div>
+                <div>
+                  <span class="text-gray text-decoration-line-through fs-12">۷,۵۰۰,۰۰۰</span>
+                </div>
+                <div
+                  class="progress w-75 mt-2 position-relative rounded-pill overflow-hidden bg-gray-light"
+                  style="height: 3%"
+                >
+                  <div class="progress-bar w-50 bg-primary-dark h-100 position-absolute start-0"></div>
+                </div>
+              </div>
+              <div class="swiper-slide discount__container-item py-4 px-2 d-flex flex-column ai-c gap-2 cup">
+                <div class="p-3">
+                  <img
+                    class="discount__container-productImage"
+                    src="public/images/discount/scroll4.webp"
+                    alt="Digikala"
+                  />
+                </div>
+                <div class="d-flex gap-5 ai-c fw-bold">
+                  <span class="badge rounded-pill bg-primary-dark px-3 py-1 fs-10 text-white">۶٪</span>
+                  <span class="fs-13 fw-bold">۶,۰۰۰,۰۰۰ <small class="fs-10">تومان</small></span>
+                </div>
+                <div>
+                  <span class="text-gray text-decoration-line-through fs-12">۷,۵۰۰,۰۰۰</span>
+                </div>
+                <div
+                  class="progress w-75 mt-2 position-relative rounded-pill overflow-hidden bg-gray-light"
+                  style="height: 3%"
+                >
+                  <div class="progress-bar w-50 bg-primary-dark h-100 position-absolute start-0"></div>
+                </div>
+              </div>
+              <div class="swiper-slide discount__container-item py-4 px-2 d-flex flex-column ai-c gap-2 cup">
+                <div class="p-3">
+                  <img
+                    class="discount__container-productImage"
+                    src="public/images/discount/scroll5.webp"
+                    alt="Digikala"
+                  />
+                </div>
+                <div class="d-flex gap-5 ai-c fw-bold">
+                  <span class="badge rounded-pill bg-primary-dark px-3 py-1 fs-10 text-white">۶٪</span>
+                  <span class="fs-13 fw-bold">۶,۰۰۰,۰۰۰ <small class="fs-10">تومان</small></span>
+                </div>
+                <div>
+                  <span class="text-gray text-decoration-line-through fs-12">۷,۵۰۰,۰۰۰</span>
+                </div>
+                <div
+                  class="progress w-75 mt-2 position-relative rounded-pill overflow-hidden bg-gray-light"
+                  style="height: 3%"
+                >
+                  <div class="progress-bar w-50 bg-primary-dark h-100 position-absolute start-0"></div>
+                </div>
+              </div>
+              <div class="swiper-slide discount__container-item py-4 px-2 d-flex flex-column ai-c gap-2 cup">
+                <div class="p-3">
+                  <img
+                    class="discount__container-productImage"
+                    src="public/images/discount/scroll6.webp"
+                    alt="Digikala"
+                  />
+                </div>
+                <div class="d-flex gap-5 ai-c fw-bold">
+                  <span class="badge rounded-pill bg-primary-dark px-3 py-1 fs-10 text-white">۶٪</span>
+                  <span class="fs-13 fw-bold">۶,۰۰۰,۰۰۰ <small class="fs-10">تومان</small></span>
+                </div>
+                <div>
+                  <span class="text-gray text-decoration-line-through fs-12">۷,۵۰۰,۰۰۰</span>
+                </div>
+                <div
+                  class="progress w-75 mt-2 position-relative rounded-pill overflow-hidden bg-gray-light"
+                  style="height: 3%"
+                >
+                  <div class="progress-bar w-50 bg-primary-dark h-100 position-absolute start-0"></div>
+                </div>
+              </div>
+              <div class="swiper-slide discount__container-item py-4 px-2 d-flex flex-column ai-c gap-2 cup">
+                <div class="p-3">
+                  <img
+                    class="discount__container-productImage"
+                    src="public/images/discount/scroll7.webp"
+                    alt="Digikala"
+                  />
+                </div>
+                <div class="d-flex gap-5 ai-c fw-bold">
+                  <span class="badge rounded-pill bg-primary-dark px-3 py-1 fs-10 text-white">۶٪</span>
+                  <span class="fs-13 fw-bold">۶,۰۰۰,۰۰۰ <small class="fs-10">تومان</small></span>
+                </div>
+                <div>
+                  <span class="text-gray text-decoration-line-through fs-12">۷,۵۰۰,۰۰۰</span>
+                </div>
+                <div
+                  class="progress w-75 mt-2 position-relative rounded-pill overflow-hidden bg-gray-light"
+                  style="height: 3%"
+                >
+                  <div class="progress-bar w-50 bg-primary-dark h-100 position-absolute start-0"></div>
+                </div>
+              </div>
+              <div class="swiper-slide discount__container-item py-4 px-2 d-flex flex-column ai-c gap-2 cup">
+                <div class="p-3">
+                  <img
+                    class="discount__container-productImage"
+                    src="public/images/discount/scroll8.webp"
+                    alt="Digikala"
+                  />
+                </div>
+                <div class="d-flex gap-5 ai-c fw-bold">
+                  <span class="badge rounded-pill bg-primary-dark px-3 py-1 fs-10 text-white">۶٪</span>
+                  <span class="fs-13 fw-bold">۶,۰۰۰,۰۰۰ <small class="fs-10">تومان</small></span>
+                </div>
+                <div>
+                  <span class="text-gray text-decoration-line-through fs-12">۷,۵۰۰,۰۰۰</span>
+                </div>
+                <div
+                  class="progress w-75 mt-2 position-relative rounded-pill overflow-hidden bg-gray-light"
+                  style="height: 3%"
+                >
+                  <div class="progress-bar w-50 bg-primary-dark h-100 position-absolute start-0"></div>
+                </div>
+              </div>
+              <div class="swiper-slide discount__container-item py-4 px-2 d-flex flex-column ai-c gap-2 cup">
+                <div class="p-3">
+                  <img
+                    class="discount__container-productImage"
+                    src="public/images/discount/scroll9.webp"
+                    alt="Digikala"
+                  />
+                </div>
+                <div class="d-flex gap-5 ai-c fw-bold">
+                  <span class="badge rounded-pill bg-primary-dark px-3 py-1 fs-10 text-white">۶٪</span>
+                  <span class="fs-13 fw-bold">۶,۰۰۰,۰۰۰ <small class="fs-10">تومان</small></span>
+                </div>
+                <div>
+                  <span class="text-gray text-decoration-line-through fs-12">۷,۵۰۰,۰۰۰</span>
+                </div>
+                <div
+                  class="progress w-75 mt-2 position-relative rounded-pill overflow-hidden bg-gray-light"
+                  style="height: 3%"
+                >
+                  <div class="progress-bar w-50 bg-primary-dark h-100 position-absolute start-0"></div>
+                </div>
+              </div>
+              <div class="swiper-slide discount__container-item py-4 px-2 d-flex flex-column ai-c gap-2 cup">
+                <div class="p-3">
+                  <img
+                    class="discount__container-productImage"
+                    src="public/images/discount/scroll10.webp"
+                    alt="Digikala"
+                  />
+                </div>
+                <div class="d-flex gap-5 ai-c fw-bold">
+                  <span class="badge rounded-pill bg-primary-dark fw-bold px-3 py-1 fs-10 text-white">۶٪</span>
+                  <span class="fs-13 fw-bold">۶,۰۰۰,۰۰۰ <small class="fs-10">تومان</small></span>
+                </div>
+                <div>
+                  <span class="text-gray text-decoration-line-through fs-12">۷,۵۰۰,۰۰۰</span>
+                </div>
+                <div
+                  class="progress w-75 mt-2 position-relative rounded-pill overflow-hidden bg-gray-light"
+                  style="height: 3%"
+                >
+                  <div class="progress-bar w-50 bg-primary-dark h-100 position-absolute start-0"></div>
+                </div>
+              </div>
+              <div class="swiper-slide discount__container-item py-4 px-2 d-flex flex-column ai-c gap-2 cup">
+                <div class="p-3">
+                  <img
+                    class="discount__container-productImage"
+                    src="public/images/discount/scroll11.webp"
+                    alt="Digikala"
+                  />
+                </div>
+                <div class="d-flex gap-5 ai-c fw-bold">
+                  <span class="badge rounded-pill bg-primary-dark px-3 py-1 fs-10 text-white">۶٪</span>
+                  <span class="fs-13 fw-bold">۶,۰۰۰,۰۰۰ <small class="fs-10">تومان</small></span>
+                </div>
+                <div>
+                  <span class="text-gray text-decoration-line-through fs-12">۷,۵۰۰,۰۰۰</span>
+                </div>
+                <div
+                  class="progress w-75 mt-2 position-relative rounded-pill overflow-hidden bg-gray-light"
+                  style="height: 3%"
+                >
+                  <div class="progress-bar w-50 bg-primary-dark h-100 position-absolute start-0"></div>
+                </div>
+              </div>
+              <div class="swiper-slide discount__container-item py-4 px-2 d-flex flex-column ai-c gap-2 cup">
+                <div class="p-3">
+                  <img
+                    class="discount__container-productImage"
+                    src="public/images/discount/scroll2.webp"
+                    alt="Digikala"
+                  />
+                </div>
+                <div class="d-flex gap-5 ai-c fw-bold">
+                  <span class="badge rounded-pill bg-primary-dark px-3 py-1 fs-10 text-white">۶٪</span>
+                  <span class="fs-13 fw-bold">۶,۰۰۰,۰۰۰ <small class="fs-10">تومان</small></span>
+                </div>
+                <div>
+                  <span class="text-gray text-decoration-line-through fs-12">۷,۵۰۰,۰۰۰</span>
+                </div>
+                <div
+                  class="progress w-75 mt-2 position-relative rounded-pill overflow-hidden bg-gray-light"
+                  style="height: 3%"
+                >
+                  <div class="progress-bar w-50 bg-primary-dark h-100 position-absolute start-0"></div>
+                </div>
+              </div>
+              <div
+                class="swiper-slide discount__container-item rounded-start-4 cup d-flex jc-c ai-c gap-3 flex-column"
+              >
+                <div class="border border-2 border-secondary rounded-circle p-4 d-flex ai-c jc-c">
+                  <i class="fas fa-arrow-left text-secondary fs-14"></i>
+                </div>
+                <span class="fs-14 text-grayBlue-dark">مشاهده همه</span>
+              </div>
+            </div>
+            <div class="swiper-button-next slider-btn"></div>
+            <div class="swiper-button-prev slider-btn"></div>
+          </div>
+        </div>
+      </section>
+      <!--! Discount Section End -->
+
+      <!--! Supermarket Section -->
+      <section class="supermarket mt-6 overflow-hidden px-0">
+        <div class="supermarket__container container-fluid container-xl rounded-5 py-7 px-5">
+          <div class="row jc-c justify-content-lg-between row-gap-4">
+            <div class="col-12 col-md-5 f-center column-gap-4 flex-wrap row-gap-3 row-gap-sm-0">
+              <img class="d-none d-sm-inline" src="public/images/supermarket/supermarket.webp" alt="Digikala" />
+              <img
+                class="w-50 supermarket__container-image"
+                src="public/images/supermarket/supermarket-white.svg"
+                alt="Digikala"
+              />
+              <div class="supermarket__container-pill py-2">
+                <span class="fs-14 text-green-dark">تا ۳۵٪ تخفیف</span>
+              </div>
+            </div>
+            <div class="col-12 col-md-7 f-center gap-5">
+              <div class="d-flex ai-c gap-3">
+                <div class="supermarket__container-item bg-white rounded-circle position-relative p-3 cup">
+                  <img
+                    class="img-fluid rounded-circle"
+                    src="public/images/supermarket/supermarket1.webp"
+                    alt="Digikala"
+                  />
+                  <span
+                    class="position-absolute bottom-0 end-0 bg-primary-dark rounded-pill px-3 py-1 fs-12 text-white"
+                    >۲۸٪</span
+                  >
+                </div>
+                <div class="supermarket__container-item bg-white rounded-circle position-relative p-3 cup">
+                  <img
+                    class="img-fluid rounded-circle"
+                    src="public/images/supermarket/supermarket2.webp"
+                    alt="Digikala"
+                  />
+                  <span
+                    class="position-absolute bottom-0 end-0 bg-primary-dark rounded-pill px-3 py-1 fs-12 text-white"
+                    >۲۸٪</span
+                  >
+                </div>
+                <div class="supermarket__container-item bg-white rounded-circle position-relative p-3 cup">
+                  <img
+                    class="img-fluid rounded-circle"
+                    src="public/images/supermarket/supermarket3.webp"
+                    alt="Digikala"
+                  />
+                  <span
+                    class="position-absolute bottom-0 end-0 bg-primary-dark rounded-pill px-3 py-1 fs-12 text-white"
+                    >۲۸٪</span
+                  >
+                </div>
+                <div class="supermarket__container-item bg-white rounded-circle position-relative p-3 cup">
+                  <img
+                    class="img-fluid rounded-circle"
+                    src="public/images/supermarket/supermarket4.webp"
+                    alt="Digikala"
+                  />
+                  <span
+                    class="position-absolute bottom-0 end-0 bg-primary-dark rounded-pill px-3 py-1 fs-12 text-white"
+                    >۲۸٪</span
+                  >
+                </div>
+                <div
+                  class="supermarket__container-item bg-white rounded-circle position-relative p-3 cup d-none d-sm-inline"
+                >
+                  <img
+                    class="img-fluid rounded-circle"
+                    src="public/images/supermarket/supermarket5.webp"
+                    alt="Digikala"
+                  />
+                  <span
+                    class="position-absolute bottom-0 end-0 bg-primary-dark rounded-pill px-3 py-1 fs-12 text-white"
+                    >۲۸٪</span
+                  >
+                </div>
+                <div
+                  class="supermarket__container-item bg-white rounded-circle position-relative p-3 cup d-none d-lg-inline"
+                >
+                  <img
+                    class="img-fluid rounded-circle"
+                    src="public/images/supermarket/supermarket6.webp"
+                    alt="Digikala"
+                  />
+                  <span
+                    class="position-absolute bottom-0 end-0 bg-primary-dark rounded-pill px-3 py-1 fs-12 text-white"
+                    >۲۸٪</span
+                  >
+                </div>
+              </div>
+              <div
+                class="supermarket__container-pill supermarket__container-pill--width py-3 cup d-flex ai-c gap-2"
+              >
+                <span class="fs-14 text-green-dark d-none d-xl-inline">بیش از ۱۰۰ کالا</span>
+                <i class="fas fa-arrow-left fs-14 text-green-dark"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--! Supermarket Section End -->
+
+      <!--! Quartet Section -->
+      <section class="quartet mt-6 px-3 px-xl-0">
+        <div class="container-fluid container-xl p-0">
+          <div class="row row-gap-3 jc-c">
+            <div class="col-6 col-md-4 col-lg-3 d-flex ai-c jc-start">
+              <img
+                class="w-100 h-100 object-fit-cover cup rounded-4 cup"
+                src="public/images/quartet/directaccess.webp"
+                alt="Digikala"
+              />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 d-flex ai-c jc-end">
+              <img
+                class="w-100 h-100 object-fit-cover cup rounded-4 cup"
+                src="public/images/quartet/directaccess2.webp"
+                alt="Digikala"
+              />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 d-flex ai-c jc-start">
+              <img
+                class="w-100 h-100 object-fit-cover cup rounded-4 cup"
+                src="public/images/quartet/directaccess3.webp"
+                alt="Digikala"
+              />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 d-flex ai-c jc-end">
+              <img
+                class="w-100 h-100 object-fit-cover cup rounded-4 cup"
+                src="public/images/quartet/directaccess4.gif"
+                alt="Digikala"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--! Quartet Section End -->
+
+      <!--! Category Section -->
+      <section class="category mt-6 px-3 px-xl-0">
+        <div class="container-fluid container-xl">
+          <div>
+            <h3 class="fs-20 fw-bold text-center">خرید بر اساس دسته‌بندی</h3>
+          </div>
+          <div class="row jc-c mt-5 row-gap-3">
+            <div class="category__item d-flex flex-column ai-c cup">
+              <img class="category__item-image" src="public/images/categrory/categrory1.png" alt="Digikala" />
+              <span class="fs-12 fw-bold text-grayBlue-dark text-center">موبایل</span>
+            </div>
+            <div class="category__item d-flex flex-column ai-c cup">
+              <img class="category__item-image" src="public/images/categrory/categrory2.png" alt="Digikala" />
+              <span class="fs-12 fw-bold text-grayBlue-dark text-center">کالای دیجیتال</span>
+            </div>
+            <div class="category__item d-flex flex-column ai-c cup">
+              <img class="category__item-image" src="public/images/categrory/category3.png" alt="Digikala" />
+              <span class="fs-12 fw-bold text-grayBlue-dark text-center">خانه و آشپزخانه</span>
+            </div>
+            <div class="category__item d-flex flex-column ai-c cup">
+              <img class="category__item-image" src="public/images/categrory/category4.png" alt="Digikala" />
+              <span class="fs-12 fw-bold text-grayBlue-dark text-center">مد و پوشاک</span>
+            </div>
+            <div class="category__item d-flex flex-column ai-c cup">
+              <img class="category__item-image" src="public/images/categrory/category5.png" alt="Digikala" />
+              <span class="fs-12 fw-bold text-grayBlue-dark text-center">کالای سوپرمارکتی</span>
+            </div>
+            <div class="category__item d-flex flex-column ai-c cup">
+              <img class="category__item-image" src="public/images/categrory/category6.png" alt="Digikala" />
+              <span class="fs-12 fw-bold text-grayBlue-dark text-center">کتاب، لوازم تحریر و هنر</span>
+            </div>
+            <div class="category__item d-flex flex-column ai-c cup">
+              <img class="category__item-image" src="public/images/categrory/category7.png" alt="Digikala" />
+              <span class="fs-12 fw-bold text-grayBlue-dark text-center">اسباب بازی، کودک و نوزاد</span>
+            </div>
+            <div class="category__item d-flex flex-column ai-c cup">
+              <img class="category__item-image" src="public/images/categrory/category8.png" alt="Digikala" />
+              <span class="fs-12 fw-bold text-grayBlue-dark text-center">زیبایی و سلامت</span>
+            </div>
+            <div class="category__item d-flex flex-column ai-c cup">
+              <img class="category__item-image" src="public/images/categrory/category9.png" alt="Digikala" />
+              <span class="fs-12 fw-bold text-grayBlue-dark text-center">ورزش و سفر</span>
+            </div>
+            <div class="category__item d-flex flex-column ai-c cup">
+              <img class="category__item-image" src="public/images/categrory/category10.png" alt="Digikala" />
+              <span class="fs-12 fw-bold text-grayBlue-dark text-center">ابزار آلات و تجهیزات</span>
+            </div>
+            <div class="category__item d-flex flex-column ai-c cup">
+              <img class="category__item-image" src="public/images/categrory/category11.png" alt="Digikala" />
+              <span class="fs-12 fw-bold text-grayBlue-dark text-center">خودرو و موتورسیکلت</span>
+            </div>
+            <div class="category__item d-flex flex-column ai-c cup">
+              <img class="category__item-image" src="public/images/categrory/category12.png" alt="Digikala" />
+              <span class="fs-12 fw-bold text-grayBlue-dark text-center"> محصولات بومی و محلی</span>
+            </div>
+            <div class="category__item d-flex flex-column ai-c cup">
+              <img class="category__item-image" src="public/images/categrory/category13.png" alt="Digikala" />
+              <span class="fs-12 fw-bold text-grayBlue-dark text-center">کارت هدیه</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--! Category Section End -->
+
+      <!--! Double Section -->
+      <section class="double mt-6 px-3 px-xl-0">
+        <div class="container-fluid container-xl p-0">
+          <div class="row row-gap-4 flex-wrap-reverse">
+            <div class="col-12 col-md-6">
+              <img class="img-fluid rounded-4 cup" src="public/images/double/direcataccess5.webp" alt="Digikala" />
+            </div>
+            <div class="col-12 col-md-6">
+              <img class="img-fluid rounded-4 cup" src="public/images/double/directaccess6.webp" alt="Digikala" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--! Double Section End -->
+
+      <!--! Recommend Section -->
+      <section class="recommend mt-6 px-3 px-xl-0">
+        <div class="container-fluid container-xl">
+          <div>
+            <h3 class="fs-20 fw-bold text-center">پیشنهاد دیجی کالا</h3>
+          </div>
+          <div class="d-flex mt-5 border border-1 border-gray rounded-4 overflow-auto">
+            <div class="recommend__items border-start border-1 border-gray p-0">
+              <div class="recommend__item py-3 border-bottom border-1 border-gray f-center flex-column gap-2">
+                <div class="recommend__item-circle bg-gray-light d-flex">
+                  <img class="h-75" src="public/images/recommend/suggest1.png" alt="Digikala" />
+                </div>
+                <span class="fs-12 text-gray-dark textBreakkit-1">گوشی موبایل</span>
+              </div>
+              <div class="recommend__item py-3 f-center flex-column gap-2">
+                <div class="recommend__item-circle bg-gray-light">
+                  <img class="h-75" src="public/images/recommend/suggest2.png" alt="Digikala" />
+                </div>
+                <span class="fs-12 text-gray-dark textBreakkit-1">هدفون ، هدست ، هنزفری</span>
+              </div>
+            </div>
+            <div class="recommend__items border-start border-1 border-gray p-0">
+              <div class="recommend__item py-3 border-bottom border-1 border-gray f-center flex-column gap-2">
+                <div class="recommend__item-circle bg-gray-light d-flex">
+                  <img class="h-75" src="public/images/recommend/suggest3.png" alt="Digikala" />
+                </div>
+                <span class="fs-12 text-gray-dark textBreakkit-1">ساعت هوشمند</span>
+              </div>
+              <div class="recommend__item py-3 f-center flex-column gap-2">
+                <div class="recommend__item-circle bg-gray-light">
+                  <img class="h-75" src="public/images/recommend/suggest4.png" alt="Digikala" />
+                </div>
+                <span class="fs-12 text-gray-dark textBreakkit-1">مکمل دارویی</span>
+              </div>
+            </div>
+            <div class="recommend__items border-start border-1 border-gray p-0">
+              <div class="recommend__item py-3 border-bottom border-1 border-gray f-center flex-column gap-2">
+                <div class="recommend__item-circle bg-gray-light d-flex">
+                  <img class="h-75" src="public/images/recommend/suggest5.png" alt="Digikala" />
+                </div>
+                <span class="fs-12 text-gray-dark textBreakkit-1">لپ تاپ و الترابوک</span>
+              </div>
+              <div class="recommend__item py-3 f-center flex-column gap-2">
+                <div class="recommend__item-circle bg-gray-light">
+                  <img class="h-75" src="public/images/recommend/suggest6.png" alt="Digikala" />
+                </div>
+                <span class="fs-12 text-gray-dark textBreakkit-1">کنسول خانگی</span>
+              </div>
+            </div>
+            <div class="recommend__items border-start border-1 border-gray p-0">
+              <div class="recommend__item py-3 border-bottom border-1 border-gray f-center flex-column gap-2">
+                <div class="recommend__item-circle bg-gray-light d-flex">
+                  <img class="h-75" src="public/images/recommend/suggest7.png" alt="Digikala" />
+                </div>
+                <span class="fs-12 text-gray-dark textBreakkit-1">اسپیکر</span>
+              </div>
+              <div class="recommend__item py-3 f-center flex-column gap-2">
+                <div class="recommend__item-circle bg-gray-light">
+                  <img class="h-75" src="public/images/recommend/suggest8.png" alt="Digikala" />
+                </div>
+                <span class="fs-12 text-gray-dark textBreakkit-1">اصلاح موی صورت </span>
+              </div>
+            </div>
+            <div class="recommend__items border-start border-1 border-gray p-0">
+              <div class="recommend__item py-3 border-bottom border-1 border-gray f-center flex-column gap-2">
+                <div class="recommend__item-circle bg-gray-light d-flex">
+                  <img class="h-75" src="public/images/recommend/suggest13.png" alt="Digikala" />
+                </div>
+                <span class="fs-12 text-gray-dark textBreakkit-1"> شارژر تبلت و موبایل</span>
+              </div>
+              <div class="recommend__item py-3 f-center flex-column gap-2">
+                <div class="recommend__item-circle bg-gray-light">
+                  <img class="h-75" src="public/images/recommend/suggest10.png" alt="Digikala" />
+                </div>
+                <span class="fs-12 text-gray-dark textBreakkit-1">تبلت</span>
+              </div>
+            </div>
+            <div class="recommend__items p-0">
+              <div class="recommend__item py-3 border-bottom border-1 border-gray f-center flex-column gap-2">
+                <div class="recommend__item-circle bg-gray-light d-flex">
+                  <img class="h-75" src="public/images/recommend/suggest11.png" alt="Digikala" />
+                </div>
+                <span class="fs-12 text-gray-dark textBreakkit-1"> سکه طلا</span>
+              </div>
+              <div class="recommend__item py-3 f-center flex-column gap-2">
+                <div class="recommend__item-circle bg-gray-light">
+                  <img class="h-75" src="public/images/recommend/suggest14.png" alt="Digikala" />
+                </div>
+                <span class="fs-12 text-gray-dark textBreakkit-1">آشنایی با فنون</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--! Recommend Section End -->
+
+      <!--! Brands Section -->
+      <section class="brands mt-6 px-3 px-xl-0">
+        <div class="container-fluid container-xl border border-1 border-gray rounded-3 py-5">
+          <div class="d-flex ai-c jc-c gap-2">
+            <i class="fa-regular fa-gem text-yellow fs-20"></i>
+            <h3 class="fs-20 fw-bold text-grayBlue-dark">محبوب‌ترین برندها</h3>
+          </div>
+          <div class="mt-4">
+            <div class="swiper mySwiper3">
+              <div class="swiper-wrapper cug">
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none me-6"
+                    src="public/images/brands/1.png"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/2.png"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/3.png"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/4.png"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/5.png"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/6.png"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/7.jpg"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/8.png"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/9.jpg"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/10.png"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/11.jpg"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/12.jpg"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/13.png"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/14.png"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/15.jpg"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/16.png"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/17.png"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/18.png"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/19.jpg"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/20.png"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c border-start border-1 border-gray-light brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none"
+                    src="public/images/brands/21.jpg"
+                    alt="Brands"
+                  />
+                </div>
+                <div class="swiper-slide d-flex ai-c jc-c brands__item">
+                  <img
+                    class="brands__item-image object-fit-contain cup user-select-none ms-6"
+                    src="public/images/brands/22.png"
+                    alt="Brands"
+                  />
+                </div>
+              </div>
+              <div class="swiper-button-next slider-btn"></div>
+              <div class="swiper-button-prev slider-btn"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--! Brands Section End -->
+
+      <!--! Double Section -->
+      <section class="double mt-6 px-3 px-xl-0">
+        <div class="container-fluid container-xl p-0">
+          <div class="row row-gap-4">
+            <div class="col-12 col-md-6">
+              <img
+                class="img-fluid rounded-4 cup user-select-none"
+                src="public/images/double/direcataccess7.webp"
+                alt="Digikala"
+              />
+            </div>
+            <div class="col-12 col-md-6">
+              <img
+                class="img-fluid rounded-4 cup user-select-none"
+                src="public/images/double/direcataccess8.webp"
+                alt="Digikala"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--! Double Section End -->
+
+      <!--! Digiplus Section -->
+      <section class="digiplus mt-6 px-3 px-xl-0">
+        <div class="container-fluid container-xl">
+          <div class="row bg-purple rounded-4 px-4 py-5 position-relative">
+            <div class="col-12 col-lg-4 d-flex flex-column gap-3 p-5 ai-c align-items-lg-start">
+              <img
+                class="w-25 object-fit-cover cup digiplus__image"
+                src="public/images/digiplus/digiplus-logo.svg"
+                alt="Digiplus"
+              />
+              <h6 class="text-white fs-15 mt-2">خدمات ویژه برای اعضا دیجی پلاس</h6>
+              <a
+                class="d-none d-lg-flex border border-white cup position-relative z-3 border-1 w-25 d-flex jc-c ai-c rounded-2 py-2 mt-2 text-white"
+                href="#"
+                >عضویت</a
+              >
+              <img
+                class="d-none d-lg-inline position-absolute w-25 object-fit-cover bottom-0"
+                src="public/images/digiplus/plus-widget.png"
+                alt="Digiplus"
+              />
+            </div>
+            <div class="col-12 col-lg-8 bg-white rounded-4 py-4 px-5">
+              <div class="d-flex jc-sb">
+                <div class="f-center gap-2">
+                  <i class="fas fa-shop fs-15 text-purple"></i>
+                  <span class="fs-15 text-purple fw-bold">ارسال فوری رایگان</span>
+                </div>
+                <span class="watch-all text-purple fw-bold fs-14 f-center gap-2 cup">مشاهده همه</span>
+              </div>
+              <div class="row mt-6 row-gap-6">
+                <div class="col-4 col-sm-2 mb-5 d-flex jc-c">
+                  <img
+                    class="cup digiplus__productPic"
+                    src="public/images/digiplus/digiplus1.jpg"
+                    alt="Digiplus"
+                  />
+                </div>
+                <div class="col-4 col-sm-2 mb-5 d-flex jc-c">
+                  <img
+                    class="cup digiplus__productPic"
+                    src="public/images/digiplus/digiplus2.jpg"
+                    alt="Digiplus"
+                  />
+                </div>
+                <div class="col-4 col-sm-2 mb-5 d-flex jc-c">
+                  <img
+                    class="cup digiplus__productPic"
+                    src="public/images/digiplus/digiplus3.jpg"
+                    alt="Digiplus"
+                  />
+                </div>
+                <div class="col-4 col-sm-2 mb-5 d-flex jc-c">
+                  <img
+                    class="cup digiplus__productPic"
+                    src="public/images/digiplus/digiplus4.jpg"
+                    alt="Digiplus"
+                  />
+                </div>
+                <div class="col-4 col-sm-2 mb-5 d-flex jc-c">
+                  <img
+                    class="cup digiplus__productPic"
+                    src="public/images/digiplus/digiplus5.jpg"
+                    alt="Digiplus"
+                  />
+                </div>
+                <div class="col-4 col-sm-2 mb-5 d-flex jc-c">
+                  <img
+                    class="cup digiplus__productPic"
+                    src="public/images/digiplus/digiplus6.jpg"
+                    alt="Digiplus"
+                  />
+                </div>
+                <div class="col-4 col-sm-2 mb-5 d-flex jc-c">
+                  <img
+                    class="cup digiplus__productPic"
+                    src="public/images/digiplus/digiplus7.jpg"
+                    alt="Digiplus"
+                  />
+                </div>
+                <div class="col-4 col-sm-2 mb-5 d-flex jc-c">
+                  <img
+                    class="cup digiplus__productPic"
+                    src="public/images/digiplus/digiplus8.jpg"
+                    alt="Digiplus"
+                  />
+                </div>
+                <div class="col-4 col-sm-2 mb-5 d-flex jc-c">
+                  <img
+                    class="cup digiplus__productPic"
+                    src="public/images/digiplus/digiplus9.jpg"
+                    alt="Digiplus"
+                  />
+                </div>
+                <div class="col-4 col-sm-2 mb-5 d-flex jc-c">
+                  <img
+                    class="cup digiplus__productPic"
+                    src="public/images/digiplus/digiplus10.jpg"
+                    alt="Digiplus"
+                  />
+                </div>
+                <div class="col-4 col-sm-2 mb-5 d-flex jc-c">
+                  <img
+                    class="cup digiplus__productPic"
+                    src="public/images/digiplus/digiplus11.jpg"
+                    alt="Digiplus"
+                  />
+                </div>
+                <div class="col-4 col-sm-2 mb-5 d-flex jc-c">
+                  <img
+                    class="cup digiplus__productPic"
+                    src="public/images/digiplus/digiplus12.jpg"
+                    alt="Digiplus"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--! Digiplus Section End -->
+
+      <!--! Digiclub Section -->
+      <section class="digiclub mt-6 px-3 px-xl-0">
+        <div
+          class="container-fluid container-xl digiclub__container rounded-4 pt-3 pb-2 px-3 pt-lg-0 pb-lg-0 px-lg-0"
+        >
+          <div class="row py-3 ai-c row-gap-4">
+            <div class="col-12 col-lg-3 pe-6 d-flex jc-c justify-content-lg-start">
+              <img
+                class="img-fluid cup user-select-none"
+                src="public/images/digiclub/digiclub-logo-white.svg"
+                alt="Digiclub"
+              />
+            </div>
+            <div class="col-12 col-lg-9 d-flex jc-c justify-content-md-between ps-4 flex-wrap gap-3 gap-md-0">
+              <div class="digiclub__container-item bg-white rounded-1 d-flex ai-c jc-sb pe-3 overflow-hidden cup">
+                <div class="d-flex gap-3 ai-c gap-md-2">
+                  <i class="fas fa-shop text-secondary"></i>
+                  <span class="text-secondary fs-13 digiclub__container-text">چرخ و بخت</span>
+                </div>
+                <img
+                  src="public/images/digiclub/digiclub1.webp"
+                  class="object-fit-cover"
+                  style="max-height: 7rem"
+                  alt="Digiclub"
+                />
+              </div>
+              <div class="digiclub__container-item bg-white rounded-1 d-flex ai-c jc-sb pe-3 overflow-hidden cup">
+                <div class="d-flex gap-3 ai-c gap-md-2">
+                  <i class="fas fa-shop text-secondary"></i>
+                  <span class="text-secondary fs-13 digiclub__container-text">ماموریت ها</span>
+                </div>
+                <img
+                  src="public/images/digiclub/digiclub2.webp"
+                  class="object-fit-cover"
+                  style="max-height: 7rem"
+                  alt="Digiclub"
+                />
+              </div>
+              <div class="digiclub__container-item bg-white rounded-1 d-flex ai-c jc-sb pe-3 overflow-hidden cup">
+                <div class="d-flex gap-3 ai-c gap-md-2">
+                  <i class="fas fa-shop text-secondary"></i>
+                  <span class="text-secondary fs-13 digiclub__container-text">جایزه ها</span>
+                </div>
+                <img
+                  src="public/images/digiclub/digiclub3.webp"
+                  class="object-fit-cover"
+                  style="max-height: 7rem"
+                  alt="Digiclub"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--! Digiclub Section End -->
+
+      <!--! Personal Section -->
+      <section class="personal mt-6 px-3 px-xl-0">
+        <div class="container-fluid container-xl p-0 border border-1 border-gray rounded-3">
+          <div class="d-flex jc-sb overflow-auto">
+            <div class="personal__container border-start border-1 border-gray py-4 px-3">
+              <div>
+                <h5 class="d-block text-black fs-15 fw-bold">
+                  سایر لوازم تزئینی
+                  <small class="fs-12 text-gray-dark d-block mt-3 fw-medium">بر اساس بازدیدهای شما</small>
+                </h5>
+              </div>
+              <div class="row mt-4">
+                <div class="col-6 border-bottom border-1 border-gray f-center cup border-start py-1">
+                  <img class="personal__container-image" src="public/images/Personal/view1.jpg" alt="Digikala" />
+                </div>
+                <div class="col-6 border-bottom border-1 border-gray f-center cup py-1">
+                  <img class="personal__container-image" src="public/images/Personal/view2.jpg" alt="Digikala" />
+                </div>
+                <div class="col-6 f-center cup border-start border-1 border-gray py-1">
+                  <img class="personal__container-image" src="public/images/Personal/view3.jpg" alt="Digikala" />
+                </div>
+                <div class="col-6 f-center cup py-1">
+                  <img class="personal__container-image" src="public/images/Personal/view4.jpg" alt="Digikala" />
+                </div>
+              </div>
+              <div class="d-flex jc-c mt-5">
+                <a class="watch-all d-flex ai-c gap-1 fs-12 fw-bold text-secondary-dark" href="#">مشاهده</a>
+              </div>
+            </div>
+            <div class="personal__container border-start border-1 border-gray py-4 px-3">
+              <div>
+                <h5 class="d-block text-black fs-15 fw-bold">
+                  کنسول خانگی
+                  <small class="fs-12 text-gray-dark d-block mt-3 fw-medium">بر اساس بازدیدهای شما</small>
+                </h5>
+              </div>
+              <div class="row mt-4">
+                <div class="col-6 border-bottom border-1 border-gray f-center cup border-start py-1">
+                  <img class="personal__container-image" src="public/images/Personal/view5.jpg" alt="Digikala" />
+                </div>
+                <div class="col-6 border-bottom border-1 border-gray f-center cup py-1">
+                  <img class="personal__container-image" src="public/images/Personal/view6.jpg" alt="Digikala" />
+                </div>
+                <div class="col-6 f-center cup border-start border-1 border-gray py-1">
+                  <img class="personal__container-image" src="public/images/Personal/view7.jpg" alt="Digikala" />
+                </div>
+                <div class="col-6 f-center cup py-1">
+                  <img class="personal__container-image" src="public/images/Personal/view8.jpg" alt="Digikala" />
+                </div>
+              </div>
+              <div class="d-flex jc-c mt-5">
+                <a class="watch-all d-flex ai-c gap-1 fs-12 fw-bold text-secondary-dark" href="#">مشاهده</a>
+              </div>
+            </div>
+            <div class="personal__container border-start border-1 border-gray py-4 px-3">
+              <div>
+                <h5 class="d-block text-black fs-15 fw-bold">
+                  عطر و ادکلن مردانه
+                  <small class="fs-12 text-gray-dark d-block mt-3 fw-medium">بر اساس بازدیدهای شما</small>
+                </h5>
+              </div>
+              <div class="row mt-4">
+                <div class="col-6 border-bottom border-1 border-gray f-center cup border-start py-1">
+                  <img class="personal__container-image" src="public/images/Personal/view9.jpg" alt="Digikala" />
+                </div>
+                <div class="col-6 border-bottom border-1 border-gray f-center cup py-1">
+                  <img class="personal__container-image" src="public/images/Personal/view10.jpg" alt="Digikala" />
+                </div>
+                <div class="col-6 f-center cup border-start border-1 border-gray py-1">
+                  <img class="personal__container-image" src="public/images/Personal/view11.jpg" alt="Digikala" />
+                </div>
+                <div class="col-6 f-center cup py-1">
+                  <img class="personal__container-image" src="public/images/Personal/view12.jpg" alt="Digikala" />
+                </div>
+              </div>
+              <div class="d-flex jc-c mt-5">
+                <a class="watch-all d-flex ai-c gap-1 fs-12 fw-bold text-secondary-dark" href="#">مشاهده</a>
+              </div>
+            </div>
+            <div class="personal__container py-4 px-3">
+              <div>
+                <h5 class="d-block text-black fs-15 fw-bold">
+                  بازی آموزشی
+                  <small class="fs-12 text-gray-dark d-block mt-3 fw-medium">بر اساس بازدیدهای شما</small>
+                </h5>
+              </div>
+              <div class="row mt-4">
+                <div class="col-6 border-bottom border-1 border-gray f-center cup border-start py-1">
+                  <img class="personal__container-image" src="public/images/Personal/view13.jpg" alt="Digikala" />
+                </div>
+                <div class="col-6 border-bottom border-1 border-gray f-center cup py-1">
+                  <img class="personal__container-image" src="public/images/Personal/view14.jpg" alt="Digikala" />
+                </div>
+                <div class="col-6 f-center cup border-start border-1 border-gray py-1">
+                  <img class="personal__container-image" src="public/images/Personal/view15.jpg" alt="Digikala" />
+                </div>
+                <div class="col-6 f-center cup py-1">
+                  <img class="personal__container-image" src="public/images/Personal/view16.jpg" alt="Digikala" />
+                </div>
+              </div>
+              <div class="d-flex jc-c mt-5">
+                <a class="watch-all d-flex ai-c gap-1 fs-12 fw-bold text-secondary-dark" href="#">مشاهده</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--! Personal Section End -->
+
+      <!--! BestSeller Section -->
+      <section class="bestSeller mt-6 px-3 px-xl-0">
+        <div class="container-fluid container-xl p-0 border border-1 rounded-3 border-gray py-5 px-4">
+          <div class="d-flex jc-c ai-c gap-2">
+            <i class="fas fa-infinity fs-18 text-yellow"></i>
+            <h4 class="text-grayBlue-dark fw-bold fs-18">پرفروش ترین کالاها</h4>
+          </div>
+          <div class="mt-4">
+            <div class="swiper mySwiper4 cug">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide d-flex flex-column gap-2 bestSeller__slide">
+                  <div class="d-flex gap-2 cup">
+                    <img class="bestSeller__slide-image" src="public/images/bestSeller/1.webp" alt="Digikala" />
+                    <div class="d-flex ai-c gap-3 border-bottom border-1 border-gray-light">
+                      <span class="text-secondary-dark fs-28 fw-bold">۱</span>
+                      <span class="textBreakkit-2 fs-12"
+                        >پودر ماشین لباسشویی سافتلن سری Gold Selection مدل Perfect And Shine مقدار 500 گرم</span
+                      >
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2 cup">
+                    <img class="bestSeller__slide-image" src="public/images/bestSeller/2.webp" alt="Digikala" />
+                    <div class="d-flex ai-c gap-3 border-bottom border-1 border-gray-light">
+                      <span class="text-secondary-dark fs-28 fw-bold">۲</span>
+                      <span class="textBreakkit-2 fs-12">کنسرو ماهی تون هایلی - 180 گرم</span>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2 cup">
+                    <img class="bestSeller__slide-image" src="public/images/bestSeller/3.webp" alt="Digikala" />
+                    <div class="d-flex ai-c gap-3 border-bottom border-1 border-gray-light">
+                      <span class="text-secondary-dark fs-28 fw-bold">۳</span>
+                      <span class="textBreakkit-2 fs-12">کنسرو ماهی تون در روغن گیاهی طبیعت - 180 گرم</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-2 bestSeller__slide">
+                  <div class="d-flex gap-2 cup">
+                    <img class="bestSeller__slide-image" src="public/images/bestSeller/4.webp" alt="Digikala" />
+                    <div class="d-flex ai-c gap-3 border-bottom border-1 border-gray-light">
+                      <span class="text-secondary-dark fs-28 fw-bold">۴</span>
+                      <span class="textBreakkit-2 fs-12">سس گوجه فرنگی بیژن - 550 گرم</span>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2 cup">
+                    <img class="bestSeller__slide-image" src="public/images/bestSeller/5.jpg" alt="Digikala" />
+                    <div class="d-flex ai-c gap-3 border-bottom border-1 border-gray-light">
+                      <span class="text-secondary-dark fs-28 fw-bold">۵</span>
+                      <span class="textBreakkit-2 fs-12">اسپری چند منظوره سیف مدل Universal وزن 750 گرم</span>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2 cup">
+                    <img class="bestSeller__slide-image" src="public/images/bestSeller/6.webp" alt="Digikala" />
+                    <div class="d-flex ai-c gap-3 border-bottom border-1 border-gray-light">
+                      <span class="text-secondary-dark fs-28 fw-bold">۶</span>
+                      <span class="textBreakkit-2 fs-12">آب معدنی میوا - 1.5 لیتر بسته 6 عددی </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-2 bestSeller__slide">
+                  <div class="d-flex gap-2 cup">
+                    <img class="bestSeller__slide-image" src="public/images/bestSeller/7.webp" alt="Digikala" />
+                    <div class="d-flex ai-c gap-3 border-bottom border-1 border-gray-light">
+                      <span class="text-secondary-dark fs-28 fw-bold">۷</span>
+                      <span class="textBreakkit-2 fs-12"
+                        >روغن آفتابگردان حاوی توکوفرول غنچه پلاس - 1500 میلی لیتر</span
+                      >
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2 cup">
+                    <img class="bestSeller__slide-image" src="public/images/bestSeller/8.jpg" alt="Digikala" />
+                    <div class="d-flex ai-c gap-3 border-bottom border-1 border-gray-light">
+                      <span class="text-secondary-dark fs-28 fw-bold">۸</span>
+                      <span class="textBreakkit-2 fs-12">کنسرو رب گوجه فرنگی طبیعت مقدار 800 گرم </span>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2 cup">
+                    <img class="bestSeller__slide-image" src="public/images/bestSeller/4.webp" alt="Digikala" />
+                    <div class="d-flex ai-c gap-3 border-bottom border-1 border-gray-light">
+                      <span class="text-secondary-dark fs-28 fw-bold">۹</span>
+                      <span class="textBreakkit-2 fs-12">رب گوجه فرنگی روژین مقدار 800 گرم </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-2 bestSeller__slide">
+                  <div class="d-flex gap-2 cup">
+                    <img class="bestSeller__slide-image" src="public/images/bestSeller/10.webp" alt="Digikala" />
+                    <div class="d-flex ai-c gap-3 border-bottom border-1 border-gray-light">
+                      <span class="text-secondary-dark fs-28 fw-bold">۱۰</span>
+                      <span class="textBreakkit-2 fs-12">کالباس 90 درصد گوشت قرمز مهيا پروتئين - 250 گرم </span>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2 cup">
+                    <img class="bestSeller__slide-image" src="public/images/bestSeller/11.webp" alt="Digikala" />
+                    <div class="d-flex ai-c gap-3 border-bottom border-1 border-gray-light">
+                      <span class="text-secondary-dark fs-28 fw-bold">۱۱</span>
+                      <span class="textBreakkit-2 fs-12"
+                        >مایع سفیدکننده غلیظ سطوح دامستوس مدل Mountain Breeze حجم 750 میلی لیتر</span
+                      >
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2 cup">
+                    <img class="bestSeller__slide-image" src="public/images/bestSeller/12.webp" alt="Digikala" />
+                    <div class="d-flex ai-c gap-3 border-bottom border-1 border-gray-light">
+                      <span class="text-secondary-dark fs-28 fw-bold">۱۲</span>
+                      <span class="textBreakkit-2 fs-12">روغن کانولا غنچه - 900 میلی لیتر</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-2 bestSeller__slide">
+                  <div class="d-flex gap-2 cup">
+                    <img class="bestSeller__slide-image" src="public/images/bestSeller/13.webp" alt="Digikala" />
+                    <div class="d-flex ai-c gap-3 border-bottom border-1 border-gray-light">
+                      <span class="text-secondary-dark fs-28 fw-bold">۱۳</span>
+                      <span class="textBreakkit-2 fs-12">باتری قلمی کملیون مدل Super Heavy Duty بسته 4 عددی</span>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2 cup">
+                    <img class="bestSeller__slide-image" src="public/images/bestSeller/14.webp" alt="Digikala" />
+                    <div class="d-flex ai-c gap-3 border-bottom border-1 border-gray-light">
+                      <span class="text-secondary-dark fs-28 fw-bold">۱۴</span>
+                      <span class="textBreakkit-2 fs-12">کره شکلی - 100 گرم بسته 3 عددی </span>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2 cup">
+                    <img class="bestSeller__slide-image" src="public/images/bestSeller/15.webp" alt="Digikala" />
+                    <div class="d-flex ai-c gap-3 border-bottom border-1 border-gray-light">
+                      <span class="text-secondary-dark fs-28 fw-bold">۱۵</span>
+                      <span class="textBreakkit-2 fs-12">لازانیا پیش پخت زر ماکارون - 300 گرم</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next slider-btn"></div>
+              <div class="swiper-button-prev slider-btn"></div>
+            </div>
+          </div>
+          <div class="d-flex jc-c mt-4">
+            <a href="#" class="watch-all text-secondary-dark fw-bold fs-13 d-flex gap-1 ai-c">مشاهده همه</a>
+          </div>
+        </div>
+      </section>
+      <!--! BestSeller Section End -->
+
+      <!--! Article Section -->
+      <section class="articles mt-6 px-3 px-xl-0 mb-xl-6">
+        <div class="container-fluid container-xl p-0">
+          <div class="d-flex ai-c gap-2 jc-c">
+            <i class="fas fa-book-open text-grayBlue-dark fs-15"></i>
+            <h6 class="text-grayBlue-dark fs-18 fw-bold">خواندنی ها</h6>
+          </div>
+          <div class="row mt-4 row-gap-4 overflow-x-auto flex-nowrap py-4 py-xl-0">
+            <div class="col-9 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+              <div class="bg-white rounded-3 overflow-hidden border border-1 border-gray cup h-100">
+                <img class="img-fluid user-select-none" src="public/images/articles/article1.jpg" alt="Digikala" />
+                <p class="fs-13 text-gray-dark mt-3 pe-4 pb-4">
+                  بررسی ماوس تسکو TM 694؛ از ارزان‌ترین ماوس‌های بی‌سیم
+                </p>
+              </div>
+            </div>
+            <div class="col-9 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+              <div class="bg-white rounded-3 overflow-hidden border border-1 border-gray cup h-100">
+                <img class="img-fluid user-select-none" src="public/images/articles/article2.jpg" alt="Digikala" />
+                <p class="fs-13 text-gray-dark mt-3 pe-4 pb-4">
+                  بررسی استند لپ‌تاپ دیپ کول SE460؛ یک استند کاملا ارزنده
+                </p>
+              </div>
+            </div>
+            <div class="col-9 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+              <div class="bg-white rounded-3 overflow-hidden border border-1 border-gray cup h-100">
+                <img class="img-fluid user-select-none" src="public/images/articles/article3.jpg" alt="Digikala" />
+                <p class="fs-13 text-gray-dark mt-3 pe-4 pb-4">
+                  بررسی ابزار چندکاره سفری باهکو؛ کیفیت بالای تولید و طراحی کاربردی
+                </p>
+              </div>
+            </div>
+            <div class="col-9 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+              <div class="bg-white rounded-3 overflow-hidden border border-1 border-gray cup h-100">
+                <img class="img-fluid user-select-none" src="public/images/articles/article4.jpg" alt="Digikala" />
+                <p class="fs-13 text-gray-dark mt-3 pe-4 pb-4">
+                  بررسی نور ثابت PL-26؛ کیت نور و سه‌پایه‌ی کاربردی
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex jc-c mt-4">
+            <a class="watch-all text-secondary-dark d-flex ai-c fs-13 fw-bold gap-1" href="#">
+              مطالب بیشتر در دیجی‌کالا مگ</a
+            >
+          </div>
+        </div>
+      </section>
+      <!--! Article Section End -->
+
+      <!--! PhoneCategory Section Start -->
+      <div class="phoneCategory d-xl-none bg-white">
+        <div class="phoneCategory__content d-flex h-100">
+          <div class="phoneCategory__content-right overflow-auto">
+            <ul class="f-center flex-column bg-gray-light">
+              <li class="phoneCategory__content-item cup fs-14 gap-3 my-transition f-center flex-column active">
+                <i class="fa fa-mobile-alt"></i>
+                <span>موبایل</span>
+              </li>
+              <li class="phoneCategory__content-item cup fs-14 gap-3 my-transition f-center flex-column">
+                <i class="fa fa-laptop"></i>
+                <span>کالای دیجیتال</span>
+              </li>
+              <li class="phoneCategory__content-item cup fs-14 gap-3 my-transition f-center flex-column">
+                <i class="fas fa-home-alt"></i>
+                <span>خانه و آشپزخانه</span>
+              </li>
+              <li class="phoneCategory__content-item cup fs-14 gap-3 my-transition f-center flex-column">
+                <i class="fa fa-lightbulb"></i>
+                <span>لوازم خانگی برقی</span>
+              </li>
+              <li class="phoneCategory__content-item cup fs-14 gap-3 my-transition f-center flex-column">
+                <i class="fa fa-shirt"></i>
+                <span>مد و پوشاک</span>
+              </li>
+              <li class="phoneCategory__content-item cup fs-14 gap-3 my-transition f-center flex-column">
+                <i class="fas fa-notes-medical"></i>
+                <span>زیبایی و سلامت</span>
+              </li>
+              <li class="phoneCategory__content-item cup fs-14 gap-3 my-transition f-center flex-column">
+                <i class="fa fa-store"></i>
+                <span>کالاهای سوپرمارکتی</span>
+              </li>
+              <li class="phoneCategory__content-item cup fs-14 gap-3 my-transition f-center flex-column">
+                <i class="fas fa-screwdriver-wrench"></i>
+                <span>ابزارآلات و تجهیزات</span>
+              </li>
+              <li class="phoneCategory__content-item cup fs-14 gap-3 my-transition f-center flex-column">
+                <i class="fas fa-credit-card"></i>
+                <span>کارت هدیه</span>
+              </li>
+              <li class="phoneCategory__content-item cup fs-14 gap-3 my-transition f-center flex-column">
+                <i class="fas fa-pen-ruler"></i>
+                <span>کتاب و لوازم تحریر</span>
+              </li>
+              <li class="phoneCategory__content-item cup fs-14 gap-3 my-transition f-center flex-column">
+                <i class="fas fa-dumbbell"></i>
+                <span>ورزش و سفر</span>
+              </li>
+            </ul>
+          </div>
+          <div class="phoneCategory__content-left overflow-auto">
+            <h2 class="watch-all d-flex ai-c gap-4 fs-18 fw-bold text-secondary-dark me-5 mt-6">
+              همه محصولات موبایل
+            </h2>
+            <ul class="accordion mt-6" id="accordionExample">
+              <li class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button phoneCategory__content-accordion"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    برند های مختلف گوشی موبایل
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <div class="accordion-body row px-0 row-gap-6">
+                    <div class="col-4 d-flex flex-column ai-c gap-3 px-0">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3 px-0">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3 px-0">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3 px-0">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3 px-0">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3 px-0">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3 px-0">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3 px-0">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3 px-0">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-item mt-6">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed phoneCategory__content-accordion"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    گوشی بر اساس قیمت
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body row px-0 row-gap-6">
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-item mt-6">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed phoneCategory__content-accordion"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    گوشی بر اساس عملکرد
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body row px-0 row-gap-6">
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-item mt-6">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed phoneCategory__content-accordion"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    گوشی بر اساس حافظه داخلی
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body row px-0 row-gap-6">
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-item mt-6">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed phoneCategory__content-accordion"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseFive"
+                  >
+                    گوشی بر اساس رزولوشن عکس
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body row px-0 row-gap-6">
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-item mt-6">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed phoneCategory__content-accordion"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix"
+                    aria-expanded="false"
+                    aria-controls="collapseSix"
+                  >
+                    لوازم جانبی موبایل
+                  </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body row px-0 row-gap-6">
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-item mt-6">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed phoneCategory__content-accordion"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseSeven"
+                    aria-expanded="false"
+                    aria-controls="collapseSeven"
+                  >
+                    تبلت
+                  </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body row px-0 row-gap-6">
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-item mt-6">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed phoneCategory__content-accordion"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseEight"
+                    aria-expanded="false"
+                    aria-controls="collapseEight"
+                  >
+                    هدفون
+                  </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body row px-0 row-gap-6">
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-item mt-6">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed phoneCategory__content-accordion"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseNine"
+                    aria-expanded="false"
+                    aria-controls="collapseNine"
+                  >
+                    داغ ترین ها
+                  </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body row px-0 row-gap-6">
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-item mt-6 mb-2">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed phoneCategory__content-accordion"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTen"
+                    aria-expanded="false"
+                    aria-controls="collapseTen"
+                  >
+                    برند های برتر
+                  </button>
+                </h2>
+                <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body row px-0 row-gap-6">
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی آیفون</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی سامسونگ</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column ai-c gap-3">
+                      <div class="phoneCategory__content-circle">
+                        <img class="img-fluid" src="public/images/logo/apple.png" alt="" />
+                      </div>
+                      <span>گوشی شیائومی</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--! PhoneCategory Section End -->
+
+      <!--! HomeBtn -->
+      <div class="homeBtn">
+        <a class="homeBtn__link" href="https://iesmaeili.ir">
+          <i class="homeBtn__link-icon fas fa-chevron-left"></i>
+        </a>
+      </div>
+
+      <!--! invisibleMainBg -->
+      <div class="main__bg position-absolute top-0 w-100 h-100 z-100"></div>
+    </main>
+    <!--! Main End -->
+
+    <!--! Footer -->
+    <footer id="Footer" class="footer mt-6 mb-xl-0 d-none d-xl-inline">
+      <div class="w-100 py-6 border-top border-1 border-gray-dark px-3 px-xl-0">
+        <div class="container-fluid container-xl">
+          <!--! Footer Top -->
+          <section class="d-flex jc-sb ai-c">
+            <a href="#">
+              <img class="img-fluid" src="public/images/footer/logo.svg" alt="Digikala" />
+            </a>
+            <a
+              id="goUpButton"
+              onclick="goUpButtonClickHandler()"
+              class="border border-1 cup border-gray-dark px-4 py-2 d-flex ai-c gap-2 fs-13 text-black fw-bold rounded-1"
+              >برگشت به بالا
+              <i class="fas fa-chevron-up"></i>
+            </a>
+          </section>
+          <!--! Footer Properties -->
+          <section class="d-flex jc-se ai-c mt-6 flex-wrap row-gap-3">
+            <div class="d-flex flex-column gap-2 ai-c footer__properties">
+              <img class="h-100 object-fit-contain" src="public/images/footer/footer1.svg" alt="Digikala" />
+              <span class="fs-12 text-grayBlue-dark fw-bold">امکان تحویل اکسپرس</span>
+            </div>
+            <div class="d-flex flex-column gap-2 ai-c footer__properties">
+              <img class="h-100 object-fit-contain" src="public/images/footer/footer2.svg" alt="Digikala" />
+              <span class="fs-12 text-grayBlue-dark fw-bold">امکان پرداخت در محل</span>
+            </div>
+            <div class="d-flex flex-column gap-2 ai-c footer__properties">
+              <img class="h-100 object-fit-contain" src="public/images/footer/footer3.svg" alt="Digikala" />
+              <span class="fs-12 text-grayBlue-dark fw-bold">۷ روز ﻫﻔﺘﻪ، ۲۴ ﺳﺎﻋﺘﻪ</span>
+            </div>
+            <div class="d-flex flex-column gap-2 ai-c footer__properties">
+              <img class="h-100 object-fit-contain" src="public/images/footer/footer4.svg" alt="Digikala" />
+              <span class="fs-12 text-grayBlue-dark fw-bold">هفت روز ضمانت بازگشت کالا</span>
+            </div>
+            <div class="d-flex flex-column gap-2 ai-c footer__properties">
+              <img class="h-100 object-fit-contain" src="public/images/footer/footer5.svg" alt="Digikala" />
+              <span class="fs-12 text-grayBlue-dark fw-bold">ﺿﻤﺎﻧﺖ اﺻﻞ ﺑﻮدن ﮐﺎﻟﺎ</span>
+            </div>
+          </section>
+          <!--! Footer Links -->
+          <section class="row mt-6 row-gap-5 jc-c">
+            <div class="col-4 col-md-3">
+              <h5 class="fs-14 fw-bold text-black">با دیجی‌کالا</h5>
+              <ul class="d-flex flex-column gap-3 mt-4">
+                <li>
+                  <a class="fs-13 text-gray-dark cup hover my-transition" href="#">اتاق خبر دیجی‌کالا</a>
+                </li>
+                <li>
+                  <a class="fs-13 text-gray-dark cup hover my-transition" href="#">فروش در دیجی‌کالا</a>
+                </li>
+                <li>
+                  <a class="fs-13 text-gray-dark cup hover my-transition" href="#">فرصت‌های شغلی</a>
+                </li>
+                <li>
+                  <a class="fs-13 text-gray-dark cup hover my-transition" href="#">گزارش تخلف در دیجی‌کالا</a>
+                </li>
+                <li>
+                  <a class="fs-13 text-gray-dark cup hover my-transition" href="#">تماس با دیجی‌کالا</a>
+                </li>
+                <li>
+                  <a class="fs-13 text-gray-dark cup hover my-transition" href="#">درباره دیجی‌کالا</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-4 col-md-3">
+              <h5 class="fs-14 fw-bold text-black">خدمات مشتریان</h5>
+              <ul class="d-flex flex-column gap-3 mt-4">
+                <li>
+                  <a class="fs-13 text-gray-dark cup hover my-transition" href="#">پاسخ به پرسش‌های متداول</a>
+                </li>
+                <li>
+                  <a class="fs-13 text-gray-dark cup hover my-transition" href="#">رویه‌های بازگرداندن کالا</a>
+                </li>
+                <li>
+                  <a class="fs-13 text-gray-dark cup hover my-transition" href="#">شرایط استفاده</a>
+                </li>
+                <li>
+                  <a class="fs-13 text-gray-dark cup hover my-transition" href="#">حریم خصوصی</a>
+                </li>
+                <li>
+                  <a class="fs-13 text-gray-dark cup hover my-transition" href="#">گزارش باگ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-4 col-md-3">
+              <h5 class="fs-14 fw-bold text-black">راهنمای خرید از دیجی‌کالا</h5>
+              <ul class="d-flex flex-column gap-3 mt-4">
+                <li>
+                  <a class="fs-13 text-gray-dark cup hover my-transition" href="#">نحوه ثبت سفارش</a>
+                </li>
+                <li>
+                  <a class="fs-13 text-gray-dark cup hover my-transition" href="#">رویه ارسال سفارش</a>
+                </li>
+                <li>
+                  <a class="fs-13 text-gray-dark cup hover my-transition" href="#">شیوه‌های پرداخت </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-3">
+              <h5 class="fs-14 fw-bold text-black">با ما همراه باشید!</h5>
+              <div class="d-flex gap-5 mt-4 mb-2 ai-c">
+                <a class="footer__social cun text-gray-dark d-flex flex-column ai-c" href="#">
+                  <span class="footer__social-animationLine youtube"></span>
+                  <i class="footer__social-icon fab fa-youtube fs-24"></i>
+                </a>
+                <a class="footer__social cun text-gray-dark d-flex flex-column ai-c" href="#">
+                  <span class="footer__social-animationLine telegram"></span>
+                  <i class="footer__social-icon fab fa-telegram fs-22 telegram"></i>
+                </a>
+                <a class="footer__social cun text-gray-dark d-flex flex-column ai-c" href="#">
+                  <span class="footer__social-animationLine whatsapp"></span>
+                  <i class="footer__social-icon fab fa-whatsapp fs-24 whatsapp"></i>
+                </a>
+                <a class="footer__social cun text-gray-dark d-flex flex-column ai-c" href="#">
+                  <span class="footer__social-animationLine twitter"></span>
+                  <i class="footer__social-icon fab fa-twitter fs-24 twitter"></i>
+                </a>
+              </div>
+              <span class="fs-14 fw-bold text-black"> با ثبت ایمیل، از جدید‌ترین تخفیف‌ها با‌خبر شوید </span>
+              <div class="d-flex gap-3 mt-4">
+                <input
+                  class="footer__email out-off rounded-2 border-0 px-4 py-3 d-flex jc-end ai-c w-75 bg-gray-light rounded-3 fs-13 fw-bold text-grayBlue-dark"
+                  type="email"
+                  placeholder="ایمیل شما"
+                />
+                <button class="bg-secondary-dark f-center text-white fs-12 fw-bold p-3 rounded-1 out-off border-0">
+                  ثبت
+                </button>
+              </div>
+            </div>
+          </section>
+          <!--! Footer Banner -->
+          <section
+            class="bg-grayBlue-dark rounded-3 d-flex jc-sb px-4 py-3 ai-c mt-6 flex-column flex-md-row row-gap-3 row-gap-md-0"
+          >
+            <div class="d-flex ai-c gap-4">
+              <img class="footer__logo" src="public/images/logo/footerlogo192.png" alt="Digikala" />
+              <span class="text-white fs-15 fw-bold"> دانلود اپلیکیشن دیجی‌کالا </span>
+            </div>
+            <div class="d-flex gap-md-4">
+              <a class="rounded-2 overflow-hidden" href="#">
+                <img
+                  class="h-100 w-100 footer__appPic"
+                  src="public/images/footer/footer-app1.svg"
+                  alt="Digikala"
+                />
+              </a>
+              <a class="rounded-2 overflow-hidden" href="#">
+                <img
+                  class="h-100 w-100 footer__appPic"
+                  src="public/images/footer/footer-app2.svg"
+                  alt="Digikala"
+                />
+              </a>
+              <a class="rounded-2 overflow-hidden" href="#">
+                <img
+                  class="h-100 w-100 footer__appPic"
+                  src="public/images/footer/footer-app3.svg"
+                  alt="Digikala"
+                />
+              </a>
+            </div>
+          </section>
+          <!--! Footer About -->
+          <section class="row mt-6 jc-sb ai-start">
+            <div class="col-7">
+              <h2 class="fs-18 fw-bold text-black">فروشگاه اینترنتی دیجی‌کالا، بررسی، انتخاب و خرید آنلاین</h2>
+              <div class="footer__about text-justify position-relative">
+                <p class="text-gray-dark fs-12 lh-lg mt-4">
+                  یک<strong class="fs-14"> خرید</strong> اینترنتی مطمئن، نیازمند فروشگاهی است که بتواند کالاهایی
+                  متنوع، باکیفیت و دارای قیمت مناسب را در مدت زمان ی کوتاه به دست مشتریان خود برساند و ضمانت بازگشت
+                  کالا هم داشته باشد؛ ویژگی‌هایی که فروشگاه اینترنتی دیجی‌کالا سال‌هاست بر روی آن‌ها کار کرده و
+                  توانسته از این طریق مشتریان ثابت خود را داشته باشد.<br />
+                  یکی از مهم‌ترین دغدغه‌های کاربران دیجی‌کالا یا هر فروشگاه‌ اینترنتی دیگری، این است که کالای
+                  خریداری شده چه زمانی به دستشان می‌رسد. دیجی‌کالا شیوه‌های مختلفی از ارسال را متناسب با فروشنده
+                  کالا،‌ مقصد کالا و همچنین نوع کالا در اختیار کاربران خود قرار می‌دهد. هر یک&nbsp;از
+                  <a class="fs-13 fw-bold hover" href="#">روش های ارسال دیجی کالا</a>
+                  شرایط و ویژگی‌های خاص خود را دارند که ممکن است گاهی برای کاربران جدید، مبهم و پیچیده به نظر
+                  برسند. برای آگاهی بیشتر مشتریان از خدمات دیجی‌کالا، این فروشگاه اینترنتی در بخشی از وب‌سایت خود
+                  راهنمای کاملی از شیوه‌‌های ارسال را به صورت ساده و به دور از پیچیدگی، قرار داده است که شامل 8 نوع
+                  ارسال کالا به روش‌های زیر است: ارسال امروز، دریافت حضوری، دریافت از گنجه، ارسال توسط فروشنده،
+                  ارسال عادی، ارسال کالاهای بزرگ، سنگین و فوق سنگین، ارسال سریع سوپرمارکتی، ارسال با پست
+                </p>
+                <h3 class="text-gray-dark fs-15 fw-bold mt-4">کدام محصولات در دیجی‌کالا قابل سفارش هستند؟</h3>
+                <p class="fs-12 lh-lg mt-2 text-gray-dark">
+                  تقریبا می‌توان گفت محصولی وجود ندارد که دیجی‌کالا برای مشتریان خود در سراسر کشور فراهم نکرده
+                  باشد. شما می‌توانید در تمامی روزهای هفته و تمامی شبانه روز یا در روزهای خاصی مثل
+                  <a class="fs-13 fw-bold hover" href="#">حراج نوروز</a>
+                  دیجی‌کالا که محصولات دارای تخفیف عالی می‌شوند، سفارش خود را به سادگی ثبت کرده و در روز و محدوده
+                  زمانی مناسب خود، درب منزل تحویل بگیرید. بعضی از گروه‌های اصلی و زیر مجموعه‌های پرطرفدار محصولات
+                  دیجی‌کالا شامل مواردی می‌شود که در ادامه به معرفی آن‌ها می‌پردازیم که امکان
+                  <a class="fs-13 fw-bold hover" href="#">ارسال امروز</a> برای آن ها وجود دارد.
+                </p>
+                <h3 class="text-gray-dark fs-15 fw-bold mt-4">خودرو، ابزار و تجهیزات صنعتی</h3>
+                <p class="fs-12 lh-lg mt-2 text-gray-dark">
+                  انواع خودروهای ایرانی و خارجی از برندهای مطرحی مثل هوندا، کیا و...، موتور سیکلت از برندهایی مثل
+                  کویر موتور و...، لوازم جانبی خودرو مثل سیستم صوتی تصویر، ضبط و...، لوازم یدکی مثل دیسک و صفحه
+                  کلاج و... و لوازم مصرفی خودرو مثل
+                  <a class="fs-13 fw-bold hover" href="#">کفپوش سانا</a> در این گروه قرار می‌گیرند.
+                </p>
+                <a class="footer__close d-block cup mt-3" onclick="footerCloserTextClickHandler()">
+                  <span class="d-flex gap-2 ai-c fs-14 fw-bold text-secondary-dark">
+                    بستن
+                    <i class="fas fa-close"></i
+                  ></span>
+                </a>
+                <div class="footer__about-gradient position-absolute w-100 h-100"></div>
+              </div>
+              <a
+                class="footer__open watch-all d-flex ai-c gap-2 fs-13 fw-bold text-secondary-dark mt-4 cup"
+                onclick="footerOpenerTextClickHandler()"
+                >مشاهده بیشتر</a
+              >
+            </div>
+            <div class="col-4 d-flex gap-3 flex-wrap jc-c">
+              <div class="footer__container d-flex jc-c cup border border-1 border-gray-dark rounded-3 py-3">
+                <img class="img-fluid object-fit-contain" src="public/images/footer/rezi.webp" alt="Digikala" />
+              </div>
+              <div class="footer__container d-flex jc-c cup border border-1 border-gray-dark rounded-3 py-3">
+                <img class="img-fluid object-fit-contain" src="public/images/footer/logo.png" alt="Digikala" />
+              </div>
+              <div class="footer__container d-flex jc-c cup border border-1 border-gray-dark rounded-3 py-3">
+                <img
+                  class="img-fluid object-fit-contain"
+                  src="public/images/footer/kasbokar.webp"
+                  alt="Digikala"
+                />
+              </div>
+            </div>
+          </section>
+          <!--! Footer EndNote -->
+          <section class="d-flex jc-c mt-6 border-top border-1 border-gray-dark pt-4">
+            <h6 class="fs-13 text-gray fw-bold text-center lh-lg">
+              برای استفاده از مطالب دیجی‌کالا، داشتن «هدف غیرتجاری» و ذکر «منبع» کافیست. تمام حقوق اين وب‌سايت نیز
+              برای شرکت نوآوران فن آوازه (فروشگاه آنلاین دیجی‌کالا) است.
+            </h6>
+          </section>
+        </div>
+      </div>
+    </footer>
+    <!--! Footer End -->
+
+    <!--! BottomMenu Start -->
+    <div
+      class="bottomMenu bg-white border-top border-1 border-gray-dark position-fixed bottom-0 end-0 w-100 z-52 d-xl-none"
+    >
+      <div class="container row mx-auto pt-3">
+        <div class="col-3 cup">
+          <a class="f-center flex-column gap-2 bottomMenu__home" onclick="homeButtonClickHandler()">
+            <i class="fs-18 fas fa-home"></i>
+            <span class="fs-15 fw-bold">خانه</span>
+          </a>
+        </div>
+        <div class="col-3 cup">
+          <a class="f-center flex-column gap-2 bottomMenu__category" onclick="categoryButtonClickHandler()">
+            <i class="fs-18 fas fa-table-cells-large"></i>
+            <span class="fs-15 fw-bold">دسته بندی</span>
+          </a>
+        </div>
+        <div class="col-3 f-center flex-column gap-2 cup">
+          <i class="fs-18 text-gray fas fa-cart-shopping"></i>
+          <span class="fs-15 text-gray fw-bold">سبد خرید</span>
+        </div>
+        <div class="col-3 cup">
+          <a class="f-center flex-column gap-2" href="login.html">
+            <i class="fs-18 text-gray fa-regular fa-user"></i>
+            <span class="fs-15 text-gray fw-bold">دیجی کالای من</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--! BottomMenu Start -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+      integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+      integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="public/js/script.min.js"></script>
+  </body>
+</html>

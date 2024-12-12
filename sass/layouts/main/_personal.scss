@@ -1,0 +1,15 @@
+// Personal Styles
+.personal {
+  &__container {
+    min-width: 32.5rem;
+    width: 24%;
+    & > div {
+      width: 98%;
+      margin: 0 auto;
+    }
+    &-image {
+      width: 9.5rem;
+      height: 9.5rem;
+    }
+  }
+}

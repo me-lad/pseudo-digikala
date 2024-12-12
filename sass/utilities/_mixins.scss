@@ -1,0 +1,70 @@
+@mixin transitionDefault($duration: 180ms, $type: ease-in, $delay: 1ms) {
+  transition: all $duration $type $delay;
+  -webkit-transition: all $duration $type $delay;
+  -moz-transition: all $duration $type $delay;
+  -ms-transition: all $duration $type $delay;
+}
+
+@mixin displayFlex($justify: center, $align: center) {
+  display: flex !important;
+  justify-content: $justify !important;
+  align-items: $align !important;
+}
+
+@mixin positionCenter() {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+@mixin textBreakkit($line: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// Responsive Breakpoints
+
+// 0-576px = phone
+// 576px-768px = phone landscape
+// 768px-992px = tablet
+// 992px-1200px =  tablet landscape
+// 1200px-1400px = laptop
+// 1400px <  = big desktop
+
+@mixin responsive($breakPoint) {
+  // Sm BreakPoint 576px ~ 575.98px
+  @if $breakPoint==Ps {
+    @media screen and (max-width: 35.99875em) {
+      @content;
+    }
+  }
+  // Md BreakPoint 768px ~ 767.98px
+  @if $breakPoint==Ph {
+    @media screen and (max-width: 47.99875em) {
+      @content;
+    }
+  }
+  // Lg BreakPoint 992px ~ 991.98px
+  @if $breakPoint==Ts {
+    @media screen and (max-width: 61.99875em) {
+      @content;
+    }
+  }
+  // xLg BreakPoint 1200px ~ 1199.98px
+  @if $breakPoint==Th {
+    @media screen and (max-width: 74.99875em) {
+      @content;
+    }
+  }
+  // xxLg BreakPoint 1400px ~ 1399.98px
+  @if $breakPoint==Laptop {
+    @media screen and (max-width: 87.49875em) {
+      @content;
+    }
+  }
+}
